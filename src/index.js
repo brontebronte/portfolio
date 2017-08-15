@@ -6,12 +6,11 @@
 //   Imports   //
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Name from './javascript/Name';
-import Menu from './javascript/Menu';
-import About from './javascript/About';
-import Portfolio from './javascript/Portfolio';
-import Contact from './javascript/Contact';
-import Built from './javascript/Built';
+import Name from './Name';
+import Menu from './Menu';
+import About from './About';
+import Portfolio from './Portfolio';
+import Contact from './Contact';
 import './stylesheet/css/main.css';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -31,7 +30,4 @@ ReactDOM.render(<Portfolio />, document.getElementById('portfolio-react'));
 registerServiceWorker();
 
 ReactDOM.render(<Contact />, document.getElementById('contact-react'));
-registerServiceWorker();
-
-ReactDOM.render(<Built />, document.getElementById('built-react'));
 registerServiceWorker();
