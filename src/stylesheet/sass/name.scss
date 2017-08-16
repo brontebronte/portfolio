@@ -4,9 +4,20 @@
 
 //////////////////
 //   Imports   //
-// @import “var.scss”;
-// @import “animation_mixin.scss”;
-// @import “other_mixin.scss”;
+@import "var";
 
-.name {
+.name__logo {
+  width: 50px;
+  display: block;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.name__title {
+  font-family: $titleFont;
+  font-size: $titleFontSize;
+  margin: 0;
+  text-align: center;
+  color: white;
+  letter-spacing: 0.7em;
 }

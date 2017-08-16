@@ -1,3 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=Poiret+One");
+@import url("https://fonts.googleapis.com/css?family=Megrim");
+@import url("https://fonts.googleapis.com/css?family=Poiret+One");
+@import url("https://fonts.googleapis.com/css?family=Megrim");
+.name__logo {
+  width: 50px;
+  display: block;
+  margin: auto;
+  padding-top: 20px; }
+
+.name__title {
+  font-family: "Poiret One", cursive;
+  font-size: 3.3em;
+  margin: 0;
+  text-align: center;
+  color: white;
+  letter-spacing: 0.7em; }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

@@ -13,11 +13,6 @@ import React, { Component } from 'react';
 import logo from './image/logo.svg'
 
 
-// CSS
-import './stylesheet/css/name.css';
-
-
-
 /////////////////////
 //   Components   //
 class Name extends Component {
@@ -25,7 +20,7 @@ class Name extends Component {
     return (
       <div className="name">
         <img className="name__logo" src={logo} alt="logo" />
-        <h1 className="name__title">BRONTË</h1>
+        <p className="name__title">brontë</p>
       </div>
     );
   }

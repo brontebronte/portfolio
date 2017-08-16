@@ -1,6 +1,9 @@
 /////////////////////////
 //   Variable SCSS    //
 ///////////////////////
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=Megrim');
+
 
 
 //////////////////
@@ -9,7 +12,13 @@
 
 /////////////////
 //   Fonts    //
-
+$titleFont: "Poiret One", cursive;
+$subtitleFont: "Megrim", sans-serif;
+$titleFontSize: 3.3em;
 
 //////////////////
 //  Spacings   //
+
+
+//////////////////
+//  Shadows   //
