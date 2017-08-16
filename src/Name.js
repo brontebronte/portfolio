@@ -8,8 +8,14 @@
 // React
 import React, { Component } from 'react';
 
+
 // Images
 import logo from './image/logo.svg'
+
+
+// CSS
+import './stylesheet/css/name.css';
+
 
 
 /////////////////////
@@ -19,7 +25,7 @@ class Name extends Component {
     return (
       <div className="name">
         <img className="name__logo" src={logo} alt="logo" />
-        <h2 className="name__title">BRONTË</h2>
+        <h1 className="name__title">BRONTË</h1>
       </div>
     );
   }

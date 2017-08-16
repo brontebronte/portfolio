@@ -2,14 +2,19 @@
 //   Main SCSS File   //
 ///////////////////////
 
-//////////////////
-//   Imports   //
-// @import “var.scss”;
-// @import “animation_mixin.scss”;
-// @import “other_mixin.scss”;
 
-
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 body {
-  background-color: grey;
+    margin: 0;
+    background-image: url("../../image/wood.png");
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat;
+    background-size: 600px;
 }

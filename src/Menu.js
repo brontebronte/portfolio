@@ -37,6 +37,7 @@ class Menu extends Component {
           <img className="menu__gear--two" src={menuDoorGear} alt="menu elevator door gear" />
           <img className="menu__gear--three" src={menuDoorGear} alt="menu elevator door gear" />
         </div>
+        <h2 className="job-title">Front End Developer</h2>
       </div>
     );
   }
