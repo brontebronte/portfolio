@@ -1,0 +1,32 @@
+/////////////////////////
+//   Menu SCSS File   //
+///////////////////////
+@import "var";
+
+
+//   Menu   //
+.menu-list {
+  list-style: none;
+  font-family: $subtitleFont;
+  color: $subtitleFontColor;
+  text-align: center;
+}
+
+.menu-list__item {
+  display: inline;
+  margin-left: 50px;
+  font-size: $subtitleFontSize;
+}
+
+//   Elevator   //
+.menu__elevator--top {
+  width: 400px;
+  display: block;
+  margin: auto;
+}
+
+.menu__elevator--arrow {
+  display: block;
+  margin: auto;
+  transform: translate(-15%, -165%);
+}

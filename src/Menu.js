@@ -22,22 +22,24 @@ class Menu extends Component {
     return (
       <div className="menu">
         <ul className="menu-list">
-          <li className="menu-list__item">about</li>
-          <li className="menu-list__item">portfolio</li>
-          <li className="menu-list__item">contact</li>
+          <li className="menu-list__item menu-list__item-one">about</li>
+          <li className="menu-list__item menu-list__item-two">portfolio</li>
+          <li className="menu-list__item menu-list__item-three">contact</li>
         </ul>
-        <img className="menu__elevator" src={menuElevator} alt="menu elevator dashboard" />
-        <img className="menu__arrow" src={menuArrow} alt="menu elevator arrow" />
-        <div className="menu__door">
-          <img className="menu__door--one" src={menuDoor} alt="menu elevator door" />
-          <img className="menu__door--two" src={menuDoor} alt="menu elevator door" />
+        <div className="menu__elevator">
+          <img className="menu__elevator--top" src={menuElevator} alt="menu elevator dashboard" />
+          <img className="menu__elevator--arrow" src={menuArrow} alt="menu elevator arrow" />
+          <div className="menu__elevator--door">
+            <img className="menu__elevator--door-one" src={menuDoor} alt="menu elevator door" />
+            <img className="menu__elevator--door-two" src={menuDoor} alt="menu elevator door" />
+          </div>
+          <div className="menu__elevator--gear">
+            <img className="menu__elevator--gear-one" src={menuDoorGear} alt="menu elevator door gear" />
+            <img className="menu__elevator--gear-two" src={menuDoorGear} alt="menu elevator door gear" />
+            <img className="menu__elevator--gear-three" src={menuDoorGear} alt="menu elevator door gear" />
+          </div>
+          <p className="menu__elevator--job-title">Front End Developer</p>
         </div>
-        <div className="menu__gear">
-          <img className="menu__gear--one" src={menuDoorGear} alt="menu elevator door gear" />
-          <img className="menu__gear--two" src={menuDoorGear} alt="menu elevator door gear" />
-          <img className="menu__gear--three" src={menuDoorGear} alt="menu elevator door gear" />
-        </div>
-        <h2 className="job-title">Front End Developer</h2>
       </div>
     );
   }

@@ -1,8 +1,10 @@
 /////////////////////////
 //   Main SCSS File   //
 ///////////////////////
-@import "name";
 @import "var";
+@import "name";
+@import "menu";
+
 
 * {
     -webkit-box-sizing: border-box;
