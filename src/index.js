@@ -9,7 +9,7 @@ import ReactDOM from 'react-dom';
 import Name from './Name';
 import Menu from './Menu';
 import About from './About';
-import Portfolio from './Portfolio';
+import Gallery from './Gallery';
 import Contact from './Contact';
 import './stylesheet/css/main.css';
 import registerServiceWorker from './registerServiceWorker';
@@ -26,7 +26,7 @@ registerServiceWorker();
 ReactDOM.render(<About />, document.getElementById('about-react'));
 registerServiceWorker();
 
-ReactDOM.render(<Portfolio />, document.getElementById('portfolio-react'));
+ReactDOM.render(<Gallery />, document.getElementById('portfolio-react'));
 registerServiceWorker();
 
 ReactDOM.render(<Contact />, document.getElementById('contact-react'));

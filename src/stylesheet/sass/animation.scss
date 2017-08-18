@@ -5,6 +5,7 @@
 
 ///////////////////////////
 //  Animation Framework  //
+//Animation mixin framework referenced from https://www.mrpapercut.com/blog/2016-09-26-keyframe-animations-in-sass
 @mixin keyframes($animationName) {
   @-webkit-keyframes #{$animationName} {
     @content;
@@ -19,7 +20,7 @@
     @content;
   }
 }
-@mixin animate($name, $duration, $iteration, $direction) {
+@mixin animate($name, $duration, $iteration, $direction, $fill-mode) {
   -webkit-animation-duration: $duration;
      -moz-animation-duration: $duration;
        -o-animation-duration: $duration;
@@ -36,6 +37,11 @@
      -moz-animation-direction: $direction;
        -o-animation-direction: $direction;
           animation-direction: $direction;
+  -webkit-animation-fill-mode: $fill-mode;
+     -moz-animation-fill-mode: $fill-mode;
+       -o-animation-fill-mode: $fill-mode;
+          animation-fill-mode: $fill-mode;
+
 }
 
 ///////////////////////////////////
@@ -46,7 +52,8 @@
 }
 
 @mixin rotate_clockwise {
-  @include animate(rotate_clockwise, 20s, infinite, linear);
+  @include animate(rotate_clockwise, 20s, infinite, linear, none);
+  transform-origin: center;
 }
 
 ///////////////////////////////////////////
@@ -57,5 +64,46 @@
 }
 
 @mixin rotate_counterclockwise {
-  @include animate(rotate_counterclockwise, 20s, infinite, linear);
+  @include animate(rotate_counterclockwise, 20s, infinite, linear, none);
+  transform-origin: center;
+}
+
+////////////////////////
+//  Open Door Right  //
+@include keyframes(right_door) {
+  from { transform: translateX(0px);}
+  to { transform: translateX(190px); }
+}
+
+@mixin right_door {
+  @include animate(right_door, 6s, 1, linear, forwards);
+}
+
+///////////////////////
+//  Open Door Left  //
+@include keyframes(left_door) {
+  from { transform: translateX(0px);}
+  to { transform: translateX(-180px); }
+}
+
+@mixin left_door {
+  @include animate(left_door, 6s, 1, linear, forwards);
+}
+
+//////////////////////////////////
+//  Title: Neon Light Flicker  //
+
+@include keyframes (pink_neon_flicker) {
+  from {
+    color: grey;
+    text-shadow: none;
+  }
+  to {
+    color: $lightPinkColor;
+    text-shadow: $neonPink;
+  }
+}
+
+@mixin pink_neon_flicker {
+  @include animate(pink_neon_flicker, 1s, 7, alternate, forwards);
 }

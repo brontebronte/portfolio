@@ -2,13 +2,13 @@
 //   Name SCSS File   //
 ///////////////////////
 @import "var";
-
+@import "animation";
 
 .name__logo {
   width: 50px;
   display: block;
   margin: auto;
-  padding-top: 20px;
+  padding-top: 6px;
 }
 
 .name__title {
@@ -16,6 +16,6 @@
   font-size: $titleFontSize;
   margin: 0;
   text-align: center;
-  color: $titleFontColor;
   letter-spacing: 0.7em;
+  @include pink_neon_flicker;
 }

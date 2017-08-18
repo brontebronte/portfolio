@@ -2,31 +2,102 @@
 //   Menu SCSS File   //
 ///////////////////////
 @import "var";
-
+@import "animation";
 
 //   Menu   //
 .menu-list {
   list-style: none;
   font-family: $subtitleFont;
-  color: $subtitleFontColor;
-  text-align: center;
+  color: $greyColor;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 2px;
+  margin-bottom: 1px;
 }
 
 .menu-list__item {
   display: inline;
-  margin-left: 50px;
   font-size: $subtitleFontSize;
+  letter-spacing: 2px;
 }
+
+.menu-list__item-one {
+  margin-right: $menuMarginRight;
+  transform: translateY($menuTranformY);
+}
+
+.menu-list__item-two {
+  margin-right: $menuMarginRight;
+}
+
+.menu-list__item-three {
+  transform: translateY($menuTranformY);
+}
+
+
+//Job Title
+.menu__elevator--job-title {
+  display: block;
+  margin: auto;
+  font-family: $subtitleFont;
+  font-size: 2em;
+  @include pink_neon_flicker;
+  transform: translateY(-110%);
+  line-height: 200px;
+  width: 350px;
+  height: 260px;
+  background-color: black;
+  text-align: center;
+  position: relative;
+  z-index: -1;
+  animation-delay: 1s;
+  color: grey;
+}
+
 
 //   Elevator   //
-.menu__elevator--top {
-  width: 400px;
+#menu__elevator {
   display: block;
   margin: auto;
+  width: 690px;
+  height: 530px;
 }
 
-.menu__elevator--arrow {
+.menu_elevator--woodpanel {
+  width: 720px;
+  height: 15px;
+  background-color: #294F7A;
   display: block;
   margin: auto;
-  transform: translate(-15%, -165%);
+  transform: translateY(-15px);
+  box-shadow: $mainShadow;
+  border-radius: 20px;
+}
+
+
+//  Elevator Gears  //
+#menu__elevator--gear-right-one {
+  @include rotate_clockwise;
+}
+
+#menu__elevator--gear-left-two {
+  @include rotate_clockwise;
+}
+
+#menu__elevator--gear-left-one {
+  @include rotate_counterclockwise;
+}
+
+#menu__elevator--gear-right-two {
+  @include rotate_counterclockwise;
+}
+
+//  Elevator Door  //
+#menu__elevator--door-right {
+  @include right_door;
+}
+
+#menu__elevator--door-left {
+  @include left_door;
 }
