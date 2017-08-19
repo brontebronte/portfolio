@@ -9,7 +9,7 @@
   display: block;
   margin: auto;
   padding-top: 6px;
-  filter: $svgShadow;
+  transform: translateX(-10px);
 }
 
 .name__title {

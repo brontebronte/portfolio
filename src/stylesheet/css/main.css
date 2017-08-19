@@ -149,7 +149,7 @@
   display: block;
   margin: auto;
   padding-top: 6px;
-  filter: drop-shadow(10px 10px 15px black); }
+  transform: translateX(-10px); }
 
 .name__title {
   font-family: "Megrim", sans-serif;
