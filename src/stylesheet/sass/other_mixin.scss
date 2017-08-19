@@ -1,4 +1,18 @@
+////////////////////////////////
+//   Other Mixin SCSS File   //
+//////////////////////////////
+@import "var";
+@import "animation";
+
 //  Neon Effect  //
-
-
-//  Shadow  //
+@mixin neon_subtitles {
+  display: block;
+  margin: auto;
+  font-family: $titleFont;
+  font-size: $titleFontSize;
+  @include pink_neon_flicker;
+  position: relative;
+  width: 300px;
+  text-align: center;
+  z-index: 1;
+}

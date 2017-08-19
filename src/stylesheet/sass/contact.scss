@@ -1,0 +1,22 @@
+////////////////////////////
+//   Contact SCSS File   //
+//////////////////////////
+@import "var";
+@import "animation";
+@import "other_mixin";
+
+.contact {
+  height: 800px;
+  line-height: 200px;
+  filter: $svgShadow;
+}
+
+.contact__title {
+  @include neon_subtitles; //located at other mixin
+  transform: translate(-60px, 230px);
+}
+
+.contact__mailbox {
+  display: block;
+  margin: auto;
+}

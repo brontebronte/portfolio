@@ -5,6 +5,10 @@
 @import "animation";
 
 //   Menu   //
+.menu{
+  height: 1100px;
+}
+
 .menu-list {
   list-style: none;
   font-family: $subtitleFont;
@@ -40,11 +44,11 @@
 .menu__elevator--job-title {
   display: block;
   margin: auto;
-  font-family: $subtitleFont;
-  font-size: 2em;
+  font-family: $titleFont;
+  font-size: 1.8em;
   @include pink_neon_flicker;
   transform: translateY(-110%);
-  line-height: 200px;
+  line-height: 240px;
   width: 350px;
   height: 260px;
   background-color: black;
@@ -62,6 +66,7 @@
   margin: auto;
   width: 690px;
   height: 530px;
+  filter: $svgShadow;
 }
 
 .menu_elevator--woodpanel {

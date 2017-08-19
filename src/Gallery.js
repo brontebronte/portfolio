@@ -19,8 +19,7 @@ class Portfolio extends Component {
   render() {
     return (
       <div className="portfolio">
-        <h2 className="portfolio__gallery">gallery</h2>
-        <img className="portfolio__plate" src={plate} alt="plate" />
+        <h2 className="portfolio__title">gallery</h2>
         <img className="portfolio__fish" src={fish} alt="blue fish" />
       </div>
     );

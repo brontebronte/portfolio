@@ -92,7 +92,6 @@
 
 //////////////////////////////////
 //  Title: Neon Light Flicker  //
-
 @include keyframes (pink_neon_flicker) {
   from {
     color: grey;
@@ -105,5 +104,14 @@
 }
 
 @mixin pink_neon_flicker {
-  @include animate(pink_neon_flicker, 1s, 7, alternate, forwards);
+  @include animate(pink_neon_flicker, 1s, 5, alternate, forwards);
+}
+
+////////////////////
+//  Tilt Motion  //
+@include keyframes (tilt_motion) {
+}
+
+@mixin tilt_motion {
+  @include animate(tilt_motion, 2s, none, linear, forwards);
 }

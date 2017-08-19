@@ -1,0 +1,17 @@
+////////////////////////////
+//   Gallery SCSS File   //
+//////////////////////////
+@import "var";
+@import "animation";
+@import "other_mixin";
+
+.portfolio__title {
+  @include neon_subtitles; //located at other mixin
+  transform: translate(-20px, 100px);
+}
+
+.portfolio__fish {
+  display: block;
+  margin: auto;
+  filter: $svgShadow;
+}

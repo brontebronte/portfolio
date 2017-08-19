@@ -9,6 +9,7 @@
   display: block;
   margin: auto;
   padding-top: 6px;
+  filter: $svgShadow;
 }
 
 .name__title {
@@ -17,5 +18,5 @@
   margin: 0;
   text-align: center;
   letter-spacing: 0.7em;
-  @include pink_neon_flicker;
+  @include pink_neon_flicker; //located at animation
 }

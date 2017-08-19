@@ -1,0 +1,30 @@
+///////////////////////////
+//   About SCSS File   //
+/////////////////////////
+@import "var";
+@import "animation";
+@import "other_mixin";
+
+//  Milk Carton  //
+.about__milkcarton {
+  display: block;
+  margin: auto;
+  transform: translateX(-260px);
+  width: 300px;
+  filter: $svgShadow;
+  transition: 0.5s ease-in-out;
+    &:hover {
+      transform: translate(-290px, -150px) rotate(25deg);
+    }
+}
+
+.about__milkcarton--title {
+  @include neon_subtitles; //located at other mixin
+  transform: translate(40px, 90px);
+}
+
+.about__milkcarton--profile-pic {
+  display: block;
+  margin: auto;
+  transform: translate(70px, -250px);
+}
