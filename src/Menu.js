@@ -35,7 +35,7 @@ class Menu extends Component {
               </feComponentTransfer>
               <feGaussianBlur stdDeviation="3"/>
               <feOffset dx="5" dy="5" result="offsetblur"/>
-              <feFlood flood-color="rgb(20, 0, 0)" result="color"/>
+              <feFlood floodColor="rgb(20, 0, 0)" result="color"/>
               <feComposite in2="offsetblur" operator="in"/>
               <feComposite in2="SourceAlpha" operator="in" />
               <feMerge>
@@ -542,7 +542,7 @@ class Menu extends Component {
         				<path d="M487.338,208.938c0,0-5.018-1.763-3.542-5.897s1.635,0,1.635,0S483.812,206.709,487.338,208.938z" fill="#E2D1AE"/>
         				<ellipse cx="488.636" cy="204.416" fill="#F1E8D6" rx="1.809" ry="1.659"/>
         				<polygon fill="#E2D1AE" points="487.492,60.718 485.551,65.346 485.551,78.887 486.521,65.764 &#x9;&#x9;&#x9;"/>
-        				<path d="M489.538,193.883c0,0-2.532-0.722-3.249,0.058L487.492,87.8L489.538,193.883z" fill="#E2D1AE" filter="url(#shadow)"/>
+        				<path d="M489.538,193.883c0,0-2.532-0.722-3.249,0.058L487.492,87.8L489.538,193.883z" fill="#E2D1AE"/>
         				<path d="M480.806,83.666c0,0-3.852-0.456-1.324-2.921c0,0,1.191-0.113,0.232,0.913&#xA;&#x9;&#x9;&#x9;&#x9;C478.755,82.683,480.806,83.666,480.806,83.666z" fill="#E2D1AE"/>
         				<path d="M493.976,83.666c0,0,4.333-0.456,1.49-2.921c0,0-1.34-0.113-0.261,0.913S493.976,83.666,493.976,83.666z" fill="#E2D1AE"/>
         				<path d="M480.709,198.691c0,0-3.852-0.456-1.324-2.921c0,0,1.191-0.113,0.232,0.913&#xA;&#x9;&#x9;&#x9;&#x9;C478.659,197.709,480.709,198.691,480.709,198.691z" fill="#E2D1AE"/>
