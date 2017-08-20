@@ -28,3 +28,15 @@
   margin: auto;
   transform: translate(70px, -250px);
 }
+
+.about__context {
+  font-family: $subtitleFont;
+  color: $lightBlue;
+  display: block;
+  margin: auto;
+  width: 300px;
+  position: relative;
+  text-align: center;
+  transform: translate(100px, -450px);
+  letter-spacing: $contextLetterSpacing;
+}

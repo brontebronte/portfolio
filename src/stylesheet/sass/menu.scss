@@ -23,7 +23,7 @@
 .menu-list__item {
   display: inline;
   font-size: $subtitleFontSize;
-  letter-spacing: 2px;
+  letter-spacing: $contextLetterSpacing;
 }
 
 .menu-list__item-one {
@@ -51,12 +51,12 @@
   line-height: 240px;
   width: 350px;
   height: 260px;
-  background-color: black;
+  background-image: url("../../image/dark_wood.png");
+  background-size: 400px;
   text-align: center;
   position: relative;
   z-index: -1;
-  animation-delay: 1s;
-  color: grey;
+  color: grey
 }
 
 
@@ -101,8 +101,10 @@
 //  Elevator Door  //
 #menu__elevator--door-right {
   @include right_door;
+  animation-delay: $doorDelay;
 }
 
 #menu__elevator--door-left {
   @include left_door;
+  animation-delay: $doorDelay;
 }

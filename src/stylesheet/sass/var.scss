@@ -25,8 +25,14 @@ $neonBlue: 0 0 20px #67C8FF, 0 0 10px #d1eeff, 0 0 40px #85d3ff, 0 0 70px #67C8F
 //  Spacings   //
 $menuMarginRight: 70px;
 $menuTranformY: 40px;
+$contextLetterSpacing: 2px;
 
 //////////////////
 //  Shadows   //
 $mainShadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.2), 0 20px 30px 0 rgba(0, 0, 0, 0.19);
 $svgShadow: drop-shadow(10px 10px 15px black);
+
+
+//////////////////
+//  Animation  //
+$doorDelay: 1s;

@@ -76,7 +76,7 @@
 }
 
 @mixin right_door {
-  @include animate(right_door, 6s, 1, linear, forwards);
+  @include animate(right_door, 3s, 1, linear, forwards);
 }
 
 ///////////////////////
@@ -87,7 +87,7 @@
 }
 
 @mixin left_door {
-  @include animate(left_door, 6s, 1, linear, forwards);
+  @include animate(left_door, 3s, 1, linear, forwards);
 }
 
 //////////////////////////////////

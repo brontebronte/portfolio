@@ -363,11 +363,11 @@
   line-height: 240px;
   width: 350px;
   height: 260px;
-  background-color: black;
+  background-image: url("../../image/dark_wood.png");
+  background-size: 400px;
   text-align: center;
   position: relative;
   z-index: -1;
-  animation-delay: 1s;
   color: grey; }
 
 #menu__elevator {
@@ -480,10 +480,10 @@
   transform-origin: center; }
 
 #menu__elevator--door-right {
-  -webkit-animation-duration: 6s;
-  -moz-animation-duration: 6s;
-  -o-animation-duration: 6s;
-  animation-duration: 6s;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -o-animation-duration: 3s;
+  animation-duration: 3s;
   -webkit-animation-iteration-count: 1;
   -moz-animation-iteration-count: 1;
   -o-animation-iteration-count: 1;
@@ -499,13 +499,14 @@
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards; }
+  animation-fill-mode: forwards;
+  animation-delay: 1s; }
 
 #menu__elevator--door-left {
-  -webkit-animation-duration: 6s;
-  -moz-animation-duration: 6s;
-  -o-animation-duration: 6s;
-  animation-duration: 6s;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -o-animation-duration: 3s;
+  animation-duration: 3s;
   -webkit-animation-iteration-count: 1;
   -moz-animation-iteration-count: 1;
   -o-animation-iteration-count: 1;
@@ -521,7 +522,8 @@
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards; }
+  animation-fill-mode: forwards;
+  animation-delay: 1s; }
 
 @-webkit-keyframes rotate_clockwise {
   from {
@@ -824,6 +826,17 @@
   display: block;
   margin: auto;
   transform: translate(70px, -250px); }
+
+.about__context {
+  font-family: "Poiret One", cursive;
+  color: #eff9ff;
+  display: block;
+  margin: auto;
+  width: 300px;
+  position: relative;
+  text-align: center;
+  transform: translate(100px, -450px);
+  letter-spacing: 2px; }
 
 @-webkit-keyframes rotate_clockwise {
   from {
@@ -1425,4 +1438,5 @@ body {
   width: 100%;
   height: 100%;
   background-repeat: repeat;
-  background-size: 600px; }
+  background-size: 600px;
+  overflow-x: hidden; }
