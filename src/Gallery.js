@@ -9,7 +9,7 @@
 import React, { Component } from 'react';
 
 // Images
-import fish from './image/fish_blue.svg'
+import fish from './image/fish_blue.svg';
 
 
 /////////////////////

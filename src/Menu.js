@@ -9,7 +9,8 @@
 import React, { Component } from 'react';
 
 // Images
-
+import character from './image/menu_character.svg';
+import glasses from './image/glasses.svg';
 
 /////////////////////
 //   Components   //
@@ -21,8 +22,10 @@ class Menu extends Component {
           <li className="menu-list__item menu-list__item-one">about</li>
           <li className="menu-list__item menu-list__item-two">gallery</li>
           <li className="menu-list__item menu-list__item-three">contact</li>
+          <div className="menu-list__arrow"></div>
+          <div className="menu-list__level">placeholder</div>
         </ul>
-        <svg height="648.182px" id="menu__elevator" width="845.929px" version="1.1" viewBox="75.811 0 845.929 648.182" x="0px" y="0px" xmlSpace="preserve">
+        <svg id="menu__elevator" height="648.182px" width="845.929px" version="1.1" viewBox="75.811 0 845.929 648.182" x="0px" y="0px" xmlSpace="preserve">
           <defs>
             <filter id="shadow" x="0" y="0" width="200%" height="200%">
               <feOffset result="offOut" in="SourceAlpha" dx="10" dy="10" />
@@ -435,34 +438,11 @@ class Menu extends Component {
         				<path d="M722.498,305.037c0,11.336-5.26,20.525-11.747,20.525H273.502c-6.487,0-11.747-9.191-11.747-20.525&#xA;&#x9;&#x9;&#x9;&#x9;v-21.948c0-11.336,5.26-20.525,11.747-20.525h437.252c6.487,0,11.747,9.191,11.747,20.525L722.498,305.037L722.498,305.037z" fill="#6C2A52"/>
         			</g>
         			<path filter="url(#inset-shadow)" d="M718.331,295.645c0,13.577-5.76,24.583-12.864,24.583h-299.26c-7.105,0-12.864-11.006-12.864-24.583&#xA;&#x9;&#x9;&#x9;v-4.167c0-13.577,5.76-24.583,12.864-24.583h299.261c7.105,0,12.864,11.006,12.864,24.583L718.331,295.645L718.331,295.645z" fill="#885573"/>
-        			<g id="Blue_Circles" filter="url(#shadow)">
-        				<circle className="menu__elevator--top-circle-gallery" cx="488.798" cy="31" fill="#294F7A" r="31"/>
-        				<circle className="menu__elevator--top-circle-contact" cx="618.826" cy="80.567" fill="#294F7A" r="31"/>
-        				<circle className="menu__elevator--top-circle-about" cx="357.707" cy="85.036" fill="#294F7A" r="31"/>
-        			</g>
         			<g id="Numbers" filter="url(#shadow)">
-        				<g>
-        					<g>
-        						<rect height="46.948" width="44.043" fill="none" transform="matrix(0.9998 -0.0175 0.0175 0.9998 -0.5521 8.5529)" x="466.379" y="12.349"/>
-        						<text fill="#DBD7E7" fontFamily="'Modern-Regular'" fontSize="59.9724" transform="matrix(0.9998 -0.0175 0.0175 0.9998 475.0536 51.8019)">2</text>
-        					</g>
         					<g>
         						<rect height="25.284" width="23.721" fill="none" transform="matrix(1 -0.0015 0.0015 1 -0.4408 0.4276)" x="272.971" y="281.421"/>
         						<text fill="#DBD7E7" fontFamily="'Modern-Regular'" fontSize="25.5464" transform="matrix(1 -0.0015 0.0015 1 272.9813 302.5585)">L E V E L</text>
         					</g>
-        				</g>
-        				<g>
-        					<g>
-        						<rect height="46.984" width="44.079" fill="none" transform="matrix(0.6561 0.7547 -0.7547 0.6561 273.3003 -436.6028)" x="593.653" y="58.073"/>
-        						<text fill="#DBD7E7" fontFamily="'Modern-Regular'" fontSize="60" transform="matrix(0.6561 0.7547 -0.7547 0.6561 594.9009 81.5874)">3</text>
-        					</g>
-        				</g>
-        				<g>
-        					<g>
-        						<rect height="46.984" width="44.079" fill="none" transform="matrix(0.7547 -0.6561 0.6561 0.7547 30.6426 256.0296)" x="335.654" y="63.546"/>
-        						<text fill="#DBD7E7" fontFamily="'Modern-Regular'" fontSize="60" transform="matrix(0.7547 -0.6561 0.6561 0.7547 357.7077 107.8271)">1</text>
-        					</g>
-        				</g>
         				<path d="M343.602,130.073c-0.363,0.544-1.287,0.566-2.065,0.048l-16.89-11.249&#xA;&#x9;&#x9;&#x9;&#x9;c-0.777-0.518-1.114-1.379-0.752-1.924l0,0c0.363-0.544,1.287-0.566,2.065-0.048l16.89,11.249&#xA;&#x9;&#x9;&#x9;&#x9;C343.627,128.668,343.965,129.529,343.602,130.073L343.602,130.073z" fill="#45002F"/>
         				<path d="M636.775,126.224c0.393,0.523,1.317,0.493,2.064-0.068l16.229-12.183c0.747-0.561,1.034-1.44,0.642-1.963&#xA;&#x9;&#x9;&#x9;&#x9;l0,0c-0.393-0.523-1.317-0.493-2.064,0.068l-16.229,12.183C636.671,124.822,636.382,125.701,636.775,126.224L636.775,126.224z" fill="#45002F"/>
         				<path d="M431.308,59.633c-0.608,0.241-1.36-0.217-1.68-1.023l-6.947-17.516c-0.32-0.806-0.086-1.655,0.522-1.897&#xA;&#x9;&#x9;&#x9;&#x9;l0,0c0.608-0.241,1.36,0.217,1.68,1.023l6.947,17.516C432.15,58.543,431.916,59.392,431.308,59.633L431.308,59.633z" fill="#45002F"/>
@@ -534,26 +514,13 @@ class Menu extends Component {
         			</g>
         		</g>
         	</g>
-        	<g id="menu__elevator--arrow" filter="url(#shadow)">
-        		<g>
-        			<g>
-        				<path d="M483.525,201.204c0,0,3.485-2.71-2.989-1.522c-2.734,0.502-4.991-4.641-0.099-4.92l1.832,0.071&#xA;&#x9;&#x9;&#x9;&#x9;c0,0,2.187,0.111,2.339-2.898s1.35-103.962,1.35-103.962s-0.591-3.708-4.281-3.262c0,0-4.059,0.135-3.966-2.675&#xA;&#x9;&#x9;&#x9;&#x9;c0,0,0.034-2.675,3.966-2.452c0,0,2.9,0.892,2.93-1.56s0-12.483,0-12.483l2.946-6.91l2.187,6.91v12.26&#xA;&#x9;&#x9;&#x9;&#x9;c0,0-0.729,1.338,1.701,1.56c2.43,0.223,5.347,0.334,5.59,1.895s0.486,3.232-4.132,3.455c-3.213,0.155-2.664,1.448-3.151,3.454&#xA;&#x9;&#x9;&#x9;&#x9;l0.963,101.54c0,0-0.546,4.235,2.309,4.458h3.524c0,0,2.856,0.307,2.856,2.341c0,1.56-1.489,2.759-3.19,2.759&#xA;&#x9;&#x9;&#x9;&#x9;s-4.247-1.111-2.574,1.94c0.66,1.203-0.082-0.11-0.082-0.11L483.525,201.204" fill="#C5A661"/>
-        				<ellipse cx="488.636" cy="204.416" fill="#C5A661" rx="6.198" ry="5.684"/>
-        				<path d="M487.338,208.938c0,0-5.018-1.763-3.542-5.897s1.635,0,1.635,0S483.812,206.709,487.338,208.938z" fill="#E2D1AE"/>
-        				<ellipse cx="488.636" cy="204.416" fill="#F1E8D6" rx="1.809" ry="1.659"/>
-        				<polygon fill="#E2D1AE" points="487.492,60.718 485.551,65.346 485.551,78.887 486.521,65.764 &#x9;&#x9;&#x9;"/>
-        				<path d="M489.538,193.883c0,0-2.532-0.722-3.249,0.058L487.492,87.8L489.538,193.883z" fill="#E2D1AE"/>
-        				<path d="M480.806,83.666c0,0-3.852-0.456-1.324-2.921c0,0,1.191-0.113,0.232,0.913&#xA;&#x9;&#x9;&#x9;&#x9;C478.755,82.683,480.806,83.666,480.806,83.666z" fill="#E2D1AE"/>
-        				<path d="M493.976,83.666c0,0,4.333-0.456,1.49-2.921c0,0-1.34-0.113-0.261,0.913S493.976,83.666,493.976,83.666z" fill="#E2D1AE"/>
-        				<path d="M480.709,198.691c0,0-3.852-0.456-1.324-2.921c0,0,1.191-0.113,0.232,0.913&#xA;&#x9;&#x9;&#x9;&#x9;C478.659,197.709,480.709,198.691,480.709,198.691z" fill="#E2D1AE"/>
-        				<path d="M496.305,198.187c0,0,3.852-0.456,1.324-2.921c0,0-1.191-0.113-0.232,0.913&#xA;&#x9;&#x9;&#x9;&#x9;C498.355,197.205,496.305,198.187,496.305,198.187z" fill="#E2D1AE"/>
-        			</g>
-        			<polyline fill="#E2D1AE" points="487.078,61.705 489.026,65.183 487.492,60.718 &#x9;&#x9;"/>
-        		</g>
-        	</g>
         </svg>
         <div className="menu_elevator--woodpanel"></div>
-        <p className="menu__elevator--job-title">front end developer</p>
+        <div className="menu__elevator--job-title">front end developer
+          <img className="menu__elevator--character" src={character} alt="profile picture" />
+          <img className="menu__elevator--glasses" src={glasses} alt="glasses" />
+          <p className="menu__elevator--pompom"><strong>o</strong></p>
+        </div>
       </div>
     );
   }

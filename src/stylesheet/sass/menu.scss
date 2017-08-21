@@ -3,6 +3,7 @@
 ///////////////////////
 @import "var";
 @import "animation";
+@import "other_mixin";
 
 //   Menu   //
 .menu{
@@ -17,26 +18,48 @@
   display: flex;
   justify-content: center;
   margin-top: 2px;
-  margin-bottom: 1px;
+  margin-bottom: 8px;
 }
 
 .menu-list__item {
   display: inline;
   font-size: $subtitleFontSize;
   letter-spacing: $contextLetterSpacing;
+  transition: 0.5s ease-in-out;
+  z-index: 2;
+    &:hover{
+      color: $lightBlue;
+      text-shadow: $neonBlue;
+      letter-spacing: 5px;
+      cursor: pointer;
+    }
 }
 
 .menu-list__item-one {
   margin-right: $menuMarginRight;
   transform: translateY($menuTranformY);
+    &:hover ~ .menu-list__arrow {
+      transform: translate($arrowTranformTranslate) rotate(53deg);
+      transform-origin: $arrowTranformOrigin;
+    }
 }
 
 .menu-list__item-two {
   margin-right: $menuMarginRight;
+  transition: 0.3s ease-in-out;
+  &:hover ~ .menu-list__arrow {
+    transform: translate($arrowTranformTranslate) rotate(90deg);
+    transform-origin: $arrowTranformOrigin;
+  }
 }
 
 .menu-list__item-three {
   transform: translateY($menuTranformY);
+  transition: 0.3s ease-in-out;
+  &:hover ~ .menu-list__arrow {
+    transform: translate($arrowTranformTranslate) rotate(130deg);
+    transform-origin: $arrowTranformOrigin;
+  }
 }
 
 
@@ -46,9 +69,8 @@
   margin: auto;
   font-family: $titleFont;
   font-size: 1.8em;
-  @include pink_neon_flicker;
   transform: translateY(-110%);
-  line-height: 240px;
+  line-height: 160px;
   width: 350px;
   height: 260px;
   background-image: url("../../image/dark_wood.png");
@@ -56,7 +78,37 @@
   text-align: center;
   position: relative;
   z-index: -1;
-  color: grey
+  color: grey;
+}
+
+.menu__elevator--glasses {
+  @include absolute_position;
+  width: 130px;
+  z-index: 1;
+  transform: translateY(190px);
+  @include tilt_motion;
+  animation-delay: 1.2s;
+  filter: brightness(0.5) drop-shadow(16px 16px 20px black);
+}
+
+.menu__elevator--character {
+  @include absolute_position;
+  width: 280px;
+  transform: translateY(131px);
+  z-index: 1;
+  filter: brightness(0.6) drop-shadow(16px 16px 20px black) contrast(120%);
+}
+
+.menu__elevator--pompom {
+  visibility: hidden;
+  display: block;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+  transform: translate(26px, -138px);
+  @include pompom_shine;
+  animation-delay: 4s;
+  font-family: $subtitleFont;
 }
 
 
@@ -78,6 +130,31 @@
   transform: translateY(-15px);
   box-shadow: $mainShadow;
   border-radius: 20px;
+}
+
+.menu-list__arrow {
+  z-index: 2;
+  background-image: url("../../image/arrow.svg");
+  width: 170px;
+  height: 26px;
+  background-size: 170px;
+  background-repeat: no-repeat;
+  position: absolute;
+  transform: translate($arrowTranformTranslate) rotate(0deg);
+  transform-origin: $arrowTranformOrigin;
+  transition: 1s ease-in-out;
+}
+
+.menu-list__level {
+  position: absolute;
+  font-size: $subtitleFontSize;
+  transform: translate(48px, 261px);
+  z-index: 1;
+  text-align: center;
+  width: 250px;
+  height: auto;
+  color: $lightBlue;
+  letter-spacing: $contextLetterSpacing;
 }
 
 
@@ -102,9 +179,11 @@
 #menu__elevator--door-right {
   @include right_door;
   animation-delay: $doorDelay;
+  z-index: 2;
 }
 
 #menu__elevator--door-left {
   @include left_door;
   animation-delay: $doorDelay;
+  z-index: 2;
 }

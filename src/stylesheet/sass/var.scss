@@ -18,20 +18,22 @@ $subtitleFont: "Poiret One", cursive;
 $titleFont: "Megrim", sans-serif;
 $titleFontSize: 2.5em;
 $subtitleFontSize: 1.3em;
-$neonPink: 0 0 20px #da36d9, 0 0 10px #fdebfd, 0 0 40px #F33CF2, 0 0 70px #da36d9, 0 0 80px #da36d9, 0 0 100px #da36d9, 0 0 130px #da36d9;
-$neonBlue: 0 0 20px #67C8FF, 0 0 10px #d1eeff, 0 0 40px #85d3ff, 0 0 70px #67C8FF, 0 0 80px #67C8FF, 0 0 100px #67C8FF, 0 0 130px #67C8FF;
+$neonPink: 0 0 20px #da36d9, 0 0 10px $lightPinkColor, 0 0 40px #F33CF2, 0 0 70px #da36d9, 0 0 80px #da36d9, 0 0 100px #da36d9, 0 0 130px #da36d9;
+$neonBlue: 0 0 20px #67C8FF, 0 0 10px #eff9ff, 0 0 40px #85d3ff, 0 0 70px #67C8FF, 0 0 80px #67C8FF, 0 0 100px #67C8FF, 0 0 130px #67C8FF;
 
 //////////////////
 //  Spacings   //
 $menuMarginRight: 70px;
 $menuTranformY: 40px;
 $contextLetterSpacing: 2px;
+$arrowTranformOrigin: 162px 45%;
+$arrowTranformTranslate: -85px, 187px;
+
 
 //////////////////
 //  Shadows   //
 $mainShadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.2), 0 20px 30px 0 rgba(0, 0, 0, 0.19);
 $svgShadow: drop-shadow(10px 10px 15px black);
-
 
 //////////////////
 //  Animation  //

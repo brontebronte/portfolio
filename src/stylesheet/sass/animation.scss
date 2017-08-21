@@ -110,8 +110,64 @@
 ////////////////////
 //  Tilt Motion  //
 @include keyframes (tilt_motion) {
+ 20% {
+   transform: translateY(190px) rotate(-10deg);
+   transform-origin: center;
+ }
+ 70% {
+   transform: translateY(190px) rotate(10deg);
+   transform-origin: center;
+ }
+ 100% {
+   transform: translateY(190px);
+ }
 }
 
 @mixin tilt_motion {
-  @include animate(tilt_motion, 2s, none, linear, forwards);
+  @include animate(tilt_motion, 2s, 1, linear, forwards);
+}
+
+//  Logo //
+@include keyframes (spin_logo) {
+  30% {
+    transform: translate(-10px, 400px) rotate(360deg);
+    transform-origin: bottom;
+    z-index: 1;
+    width: 55px;
+  }
+  100% {
+    transform: translate(20px, 515px) rotate(17deg);
+    transform-origin: center;
+    width: 70px;
+    z-index: 1;
+  }
+}
+
+@mixin spin_logo {
+  @include animate(spin_logo, 2s, none, linear, forwards);
+}
+
+//  Pom Pom Shine  //
+@include keyframes (pompom_shine) {
+  20% {
+    visibility: visible;
+  }
+  40% {
+    visibility: visible;
+    color: $lightBlue;
+    text-shadow: $neonBlue;
+  }
+  60% {
+    visibility: visible;
+    color: grey;
+  }
+  100% {
+    visibility: visible;
+    color: $lightBlue;
+    text-shadow: $neonBlue;
+    font-size: 1.3em;
+  }
+}
+@mixin pompom_shine {
+  @include animate(pompom_shine, 3s, 1, linear, forwards);
 }

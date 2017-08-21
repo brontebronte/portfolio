@@ -16,3 +16,12 @@
   text-align: center;
   z-index: 1;
 }
+
+// Centering Absolute Position Images//
+@mixin absolute_position {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}

@@ -10,7 +10,7 @@ import React, { Component } from 'react';
 
 
 // Images
-import logo from './image/logo.svg'
+import logo from './image/logo.svg';
 
 
 /////////////////////

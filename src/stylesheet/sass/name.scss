@@ -9,13 +9,20 @@
   display: block;
   margin: auto;
   padding-top: 6px;
-  transform: translateX(-10px);
+  transform: translate(-10px);
+  position: relative;
+  padding-top: 15px;
+  @include spin_logo;
+  animation-delay: 2.5s;
+  height: 80px;
 }
 
 .name__title {
+  display: block;
+  margin: auto;
+  padding-bottom: 10px;
   font-family: $titleFont;
   font-size: $titleFontSize;
-  margin: 0;
   text-align: center;
   letter-spacing: 0.7em;
   @include pink_neon_flicker; //located at animation
