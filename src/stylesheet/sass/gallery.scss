@@ -1,9 +1,6 @@
 ////////////////////////////
 //   Gallery SCSS File   //
 //////////////////////////
-@import "var";
-@import "other_mixin";
-@import "animation";
 
 .gallery__title {
   @include neon_subtitles; //located at other mixin
