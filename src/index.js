@@ -26,7 +26,7 @@ registerServiceWorker();
 ReactDOM.render(<About />, document.getElementById('about-react'));
 registerServiceWorker();
 
-ReactDOM.render(<Gallery />, document.getElementById('portfolio-react'));
+ReactDOM.render(<Gallery />, document.getElementById('gallery-react'));
 registerServiceWorker();
 
 ReactDOM.render(<Contact />, document.getElementById('contact-react'));

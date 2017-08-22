@@ -12,6 +12,22 @@ import React, { Component } from 'react';
 import character from './image/menu_character.svg';
 import glasses from './image/glasses.svg';
 
+//Objects
+var categories = [
+  {
+    categoriesName: 'About',
+    categoriesUrl: '#about-react'
+  },
+  {
+    categoriesName: 'Gallery',
+    categoriesUrl: '#gallery-react'
+  },
+  {
+    categoriesName: 'Contact',
+    categoriesUrl: '#contact-react'
+  }
+]
+
 /////////////////////
 //   Components   //
 class Menu extends Component {
@@ -517,7 +533,7 @@ class Menu extends Component {
         </svg>
         <div className="menu_elevator--woodpanel"></div>
         <div className="menu__elevator--job-title">front end developer
-          <img className="menu__elevator--character" src={character} alt="profile picture" />
+          <img className="menu__elevator--character" src={character} alt="a girl perching up" />
           <img className="menu__elevator--glasses" src={glasses} alt="glasses" />
           <p className="menu__elevator--pompom"><strong>o</strong></p>
         </div>

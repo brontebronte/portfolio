@@ -94,7 +94,7 @@
 //  Title: Neon Light Flicker  //
 @include keyframes (pink_neon_flicker) {
   from {
-    color: grey;
+    color: $greyColor;
     text-shadow: none;
   }
   to {
@@ -159,7 +159,7 @@
   }
   60% {
     visibility: visible;
-    color: grey;
+    color: $greyColor;
   }
   100% {
     visibility: visible;
@@ -170,4 +170,32 @@
 }
 @mixin pompom_shine {
   @include animate(pompom_shine, 3s, 1, linear, forwards);
+}
+
+//   Hovering  //
+@include keyframes (hovering) {
+  from {
+     transform: translate(-180px, -200px);
+  }
+  to {
+     transform: translate(-180px, -220px);
+  }
+}
+
+@mixin hovering {
+  @include animate(hovering, 0.5s, 9, alternate, both);
+}
+
+//  Sparkle Drizzling  //
+@include keyframes (sparkling) {
+  from {
+    transform: translateY($sparklesPositionY);
+  }
+  to {
+    transform: translateY(-450px);
+  }
+}
+
+@mixin sparkling {
+  @include animate(sparkling, 4s, infinite, ease-in-out, both);
 }

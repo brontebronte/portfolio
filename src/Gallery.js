@@ -14,15 +14,15 @@ import fish from './image/fish_blue.svg';
 
 /////////////////////
 //   Components   //
-class Portfolio extends Component {
+class Gallery extends Component {
   render() {
     return (
-      <div className="portfolio">
-        <h2 className="portfolio__title">gallery</h2>
-        <img className="portfolio__fish" src={fish} alt="blue fish" />
+      <div className="gallery">
+        <h2 className="gallery__title">gallery</h2>
+        <img className="gallery__fish" src={fish} alt="blue fish" />
       </div>
     );
   }
 }
 
-export default Portfolio;
+export default Gallery;

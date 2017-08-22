@@ -5,6 +5,56 @@
 @import "animation";
 @import "other_mixin";
 
+//  Sparkles  //
+
+.about__sparkles--one {
+  transform: translateY($sparklesPositionY);
+  @include absolute_position;
+  @include sparkling;
+  animation-delay: 1s;
+}
+
+.about__sparkles--two {
+  @include absolute_position;
+  transform: translateY($sparklesPositionY);
+  @include sparkling;
+}
+
+.about__sparkles--three {
+  transform: translateY($sparklesPositionY);
+  @include absolute_position;
+  @include sparkling;
+  animation-delay: 2s;
+}
+
+.about__sparkles--four {
+  transform: translateY($sparklesPositionY);
+  @include absolute_position;
+  @include sparkling;
+  animation-delay: 3s;
+}
+
+
+//  Hover Sign  //
+.about__hover-me {
+ transform: translate(-180px, -200px);
+ @include hovering;
+}
+
+.about__hover-me--instruction {
+  display: block;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  font-size: 30px;
+  font-family: $subtitleFont;
+  margin-bottom: 5px;
+  color: $lightBlue;
+  text-shadow: $neonBlue;
+  letter-spacing: 0.3em;
+}
+
+
 //  Milk Carton  //
 .about__milkcarton {
   display: block;
@@ -28,6 +78,7 @@
   display: block;
   margin: auto;
   transform: translate(70px, -250px);
+  filter: brightness(0.8) contrast(110%);
 }
 
 .about__context {
@@ -37,7 +88,6 @@
   margin: auto;
   width: 300px;
   position: relative;
-  text-align: center;
   transform: translate(100px, -450px);
   letter-spacing: $contextLetterSpacing;
 }
