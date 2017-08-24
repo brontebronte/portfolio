@@ -70,7 +70,7 @@
   line-height: 160px;
   width: 350px;
   height: 260px;
-  background-image: url("../../image/dark_wood.png");
+  background-image: url($darkWoodBack);
   background-size: 400px;
   text-align: center;
   position: relative;
@@ -102,7 +102,7 @@
   margin: auto;
   position: relative;
   z-index: 2;
-  transform: translate(26px, -138px);
+  transform: translate(26px, -136px);
   @include pompom_shine;
   animation-delay: 4s;
   font-family: $subtitleFont;
@@ -144,7 +144,7 @@
 
 .menu-list__level {
   position: absolute;
-  font-family: $titleFont;
+  font-family: $subtitleFont;
   font-size: $subtitleFontSize;
   transform: translate(48px, 261px);
   z-index: 1;

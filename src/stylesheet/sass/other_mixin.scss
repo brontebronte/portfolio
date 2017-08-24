@@ -1,8 +1,6 @@
 ////////////////////////////////
 //   Other Mixin SCSS File   //
 //////////////////////////////
-@import "var";
-@import "animation";
 
 //  Neon Effect  //
 @mixin neon_subtitles {
@@ -17,7 +15,7 @@
   z-index: 1;
 }
 
-// Centering Absolute Position Images//
+// Centering Absolute Position Images  //
 @mixin absolute_position {
   position: absolute;
   margin-left: auto;

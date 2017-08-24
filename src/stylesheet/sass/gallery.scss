@@ -4,11 +4,12 @@
 
 .gallery__title {
   @include neon_subtitles; //located at other mixin
-  transform: translate(-20px, 100px);
+  transform: translate(-20px, 350px);
 }
 
-.gallery__fish {
+.gallery__milk {
   display: block;
   margin: auto;
-  filter: $svgShadow;
+  filter: $svgShadow contrast(120%) brightness(0.7);
+  transform: translateX(30px);
 }

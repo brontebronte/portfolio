@@ -9,7 +9,7 @@
 import React, { Component } from 'react';
 
 // Images
-import fish from './image/fish_blue.svg';
+import milk from './image/milkcarton.svg';
 
 
 /////////////////////
@@ -19,7 +19,7 @@ class Gallery extends Component {
     return (
       <div className="gallery">
         <h2 className="gallery__title">gallery</h2>
-        <img className="gallery__fish" src={fish} alt="blue fish" />
+        <img className="gallery__milk" src={milk} alt="milk carton" />
       </div>
     );
   }

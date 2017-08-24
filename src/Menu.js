@@ -12,21 +12,6 @@ import React, { Component } from 'react';
 import character from './image/menu_character.svg';
 import glasses from './image/glasses.svg';
 
-//Objects
-var categories = [
-  {
-    categoriesName: 'About',
-    categoriesUrl: '#about-react'
-  },
-  {
-    categoriesName: 'Gallery',
-    categoriesUrl: '#gallery-react'
-  },
-  {
-    categoriesName: 'Contact',
-    categoriesUrl: '#contact-react'
-  }
-]
 
 /////////////////////
 //   Components   //
@@ -39,7 +24,7 @@ class Menu extends Component {
           <li className="menu-list__item menu-list__item-two">gallery</li>
           <li className="menu-list__item menu-list__item-three">contact</li>
           <div className="menu-list__arrow"></div>
-          <div className="menu-list__level">placeholder</div>
+          <div className="menu-list__level">home sweet home</div>
         </ul>
         <svg id="menu__elevator" height="648.182px" width="845.929px" version="1.1" viewBox="75.811 0 845.929 648.182" x="0px" y="0px" xmlSpace="preserve">
           <defs>
