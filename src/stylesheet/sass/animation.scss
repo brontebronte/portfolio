@@ -200,3 +200,47 @@
 @mixin sparkling {
   @include animate(sparkling, 2.2s, infinite, ease-in-out, both);
 }
+
+
+//  Hands moving on About cube  //
+@include keyframes (moving_hands) {
+  from {
+    transform: translate(-69px, 20px);
+  }
+  to {
+    transform: translate(-69px, 90px);
+  }
+}
+
+@mixin moving_hands {
+  @include animate(moving_hands, 2s, 3, alternate, forwards);
+}
+
+//  Clouds  //
+@include keyframes (cloud) {
+  0% {
+    width:0px;
+    filter: brightness(0.2);
+  }
+  30% {
+    width:400px;
+    filter: brightness(0.2);
+  }
+  50%{
+    filter: brightness(1);
+  }
+  70%{
+    filter: brightness(0.2);
+  }
+  90%{
+    filter: brightness(1);
+  }
+  100% {
+    width:400px;
+    filter: brightness(0.2);
+  }
+}
+
+@mixin cloudsMove {
+  @include animate(cloud, 5s, 1, linear, forwards);
+}

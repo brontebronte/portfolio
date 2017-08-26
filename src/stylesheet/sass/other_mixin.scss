@@ -23,3 +23,18 @@
   left: 0;
   right: 0;
 }
+
+
+//  About Me Context Cube  //
+@mixin about_me {
+  background-image: url(../../image/dark_wood.png);
+  background-size: 400px;
+  box-shadow: $mainShadow;
+}
+
+@mixin cloud {
+  filter: brightness(0.2);
+  width: 0px;
+  @include absolute_position;
+  transition: 4s ease-in-out;
+}

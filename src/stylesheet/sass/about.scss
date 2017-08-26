@@ -32,12 +32,13 @@
 
 //  Context  //
 .about__container {
-  transform: translateY(-160px);
+  transform: translate(-20px, -100px);
   width: 300px;
   height: 300px;
   margin: 200px auto;
   perspective: 800px;
   margin-bottom: 600px;
+  cursor: pointer;
 }
 
 .about__box {
@@ -59,6 +60,21 @@
   &:hover ~ .about__title-bone {
     opacity: 1;
   }
+  &:hover ~ .about__hands {
+    opacity: 0;
+  }
+  &:hover ~ .about__hover {
+    opacity: 0;
+  }
+  &:hover ~ .about__cloud-one {
+    @include cloudsMove;
+  }
+  &:hover ~ .about__cloud-two {
+    @include cloudsMove;
+  }
+  &:hover ~ .about__cloud-three {
+    @include cloudsMove;
+  }
 }
 
 .about__box div {
@@ -70,15 +86,52 @@
 
 .about__front {
   transform: translateZ(150px);
-  padding: 30px;
+  padding: 32px;
+  text-align: center;
+  @include about_me;
 }
 
 .about__left {
   transform: rotateY(-90deg) translateX(-150px);
   transform-origin: left;
   padding: 30px;
+  @include about_me;
 }
 
+.about__front--one {
+  margin-top: 0;
+}
+
+.about__front--three {
+  margin-bottom: 0;
+}
+
+.about__left-logo {
+  width:250px;
+}
+
+//  hands  //
+.about__hands {
+  @include absolute_position;
+  @include moving_hands;
+  z-index: -1;
+  width: 464px;
+  transform: translate(-69px, 90px);
+  filter: brightness(0.4) contrast(130%) $svgShadow;
+  transition: 2.1s ease-in;
+}
+
+// arrow  //
+.about__hover {
+  @include absolute_position;
+  transition: 2s ease-in;
+  filter: brightness(0.8);
+  transform: translate(270px, -100px) rotate(-8deg);
+}
+
+.about__arrow {
+  width: 130px;
+}
 
 
 //  Fish Page Title  //
@@ -86,7 +139,7 @@
   margin-bottom: 400px;
   @include absolute_position;
   z-index: -1;
-  transform: translate(-20px, 620px);
+  transform: translate(-25px, 620px);
   transition: 1s ease-in-out;
 }
 
@@ -99,7 +152,7 @@
   display: block;
   margin: auto;
   transform: translateY(-330px);
-  filter: $svgShadow;
+  filter: $svgShadow brightness(0.7);
 }
 
 
@@ -108,7 +161,7 @@
   margin-bottom: 400px;
   @include absolute_position;
   z-index: -1;
-  transform: translate(-20px, 620px);
+  transform: translate(-15px, 620px);
   transition: 1s ease-in-out;
   transition-delay: 0.5s;
   opacity: 0;
@@ -116,12 +169,41 @@
 
 .about__title--font-bone {
   @include neon_subtitles; //located at other mixin
-  transform: translate(15px, -230px);
+  transform: translate(25px, -230px);
 }
 
 .about__title--image-bone {
   display: block;
   margin: auto;
   transform: translateY(-330px);
-  filter: $svgShadow;
+  filter: $svgShadow brightness(0.7);
+}
+
+.about__plate {
+  margin-bottom: 400px;
+  @include absolute_position;
+  z-index: -2;
+  transform: translate(-40px, 270px);
+  transition: 1s ease-in-out;
+  transition-delay: 0.5s;
+  width: 400px;
+  filter: $svgShadow brightness(0.8);
+}
+
+.about__cloud-one{
+  @include cloud;
+  transform: translate(-100px, -170px);
+}
+
+.about__cloud-two{
+  @include cloud;
+  transform: translate(-200px, -50px);
+  z-index: -1;
+  animation-delay: 0.2s;
+}
+
+.about__cloud-three{
+  @include cloud;
+  transform: translate(30px, 250px);
+  animation-delay: 0.4s;
 }
