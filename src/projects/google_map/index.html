@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <title>Google Map API</title>
+    <!--Icon Font CDN  -->
+    <script async defer
+    src="https://use.fontawesome.com/8db30244fb.js">
+    </script>
+  </head>
+  <body>
+    <nav id="container" data-bind="css: {close: isClose}">
+      <article id="option-box">
+        <section class="upper-option-box">
+          <header id="title-option-box">Florence ITALY</header>
+          <div class="marker-icon">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          </div>
+          <section class="search-box">
+            <input id="zoom-to-area-text" data-bind="textInput: filter" type="search" placeholder="Search">
+          </section>
+        </section>
+        <hr class="menu-hr">
+        <!-- Utilizes "Knockout" observables in this section-->
+        <section id="markerListings" data-bind="foreach: filterLoc">
+            <div class="markerWhole" data-bind="click: $parent.setMarker">
+              <div class="markerTitle" data-bind="text: title"></div>
+              <div class="markerLoc" data-bind="text: posLoc"></div>
+            </div>
+        </section>
+      </article>
+      <detail id="open-option-tab" data-bind="click: closeList">
+        <div class="menu1">M</div>
+        <div class="menu1">E</div>
+        <div class="menu1">N</div>
+        <div class="menu1">U</div>
+      </detail>
+    </nav>
+    <!-- Utilizes Google Map API -->
+    <main id ="map"></main>
+
+    <!-- Knockout CDN -->
+    <script
+    src="js/lib/knockout-3.4.2.js">
+    </script>
+
+    <!-- Jquery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous">
+    </script>
+
+    <!-- JS Code for google API -->
+    <script src="js/googlemap.js"></script>
+
+    <!-- Google Map API Link -->
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry&key=AIzaSyAigLu_T62sxJabB0LIxowbOPQVS6FNoqo&v=3&callback=initMap"
+    onerror="errorMsg()">
+    </script>
+  </body>
+</html>

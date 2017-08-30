@@ -1,0 +1,33 @@
+[
+    {
+        "title": "Gusta Pizza",
+        "location": {
+            "lat": 43.7665011,
+            "lng": 11.248531
+        }
+    }, {
+        "title": "Gelateria Santa Trinita",
+        "location": {
+            "lat": 43.7685019,
+            "lng": 11.2499541
+        }
+    }, {
+        "title": "Trattoria Diladdarno",
+        "location": {
+            "lat": 43.7658903,
+            "lng": 11.2446108
+        }
+    }, {
+        "title": "Pittam'ingolli",
+        "location": {
+            "lat": 43.766632,
+            "lng": 11.246986
+        }
+    }, {
+        "title": "Sapori & Dintorni (Conad)",
+        "location": {
+            "lat": 43.767239,
+            "lng": 11.2529772
+        }
+    }
+]

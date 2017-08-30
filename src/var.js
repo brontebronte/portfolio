@@ -22,27 +22,27 @@ var menu = [
 
 var gallery = [
   {
-    galleryName:'',
-    galleryDescription:'',
-    galleryTags:'',
-    galleryPic:''
+    galleryName:'Google Map API',
+    galleryDescription:'Project which includes Google API, Foursquare API and Knockout JS, part of Udacity',
+    galleryPic:'./image/project_pic/googlemap.png',
+    galleryUrl: './projects/google_map/index.html'
   },
   {
-    galleryName:'',
-    galleryDescription:'',
-    galleryTags:'',
-    galleryPic:''
+    galleryName:'Feed Reader',
+    galleryDescription:'Utilizing Jasmine, as part of Udacity course',
+    galleryPic:'./image/project_pic/jasmine.png',
+    galleryUrl: './projects/feed_reader/index.html'
   },
   {
-    galleryName:'',
-    galleryDescription:'',
-    galleryTags:'',
-    galleryPic:''
+    galleryName:'Web Optimization',
+    galleryDescription:'Optimizing web given by Udacity, utilizing google developer tool and Gulp',
+    galleryPic:'./image/project_pic/weboptimize.png',
+    galleryUrl: './projects/web_op/views/pizza.html'
   },
   {
-    galleryName:'',
-    galleryDescription:'',
-    galleryTags:'',
-    galleryPic:''
-  },
+    galleryName:'Frogger Game Arcade	',
+    galleryDescription:'Utilizes Javascript Object Orientated Programming',
+    galleryPic:'./image/project_pic/gamearcade.png',
+    galleryUrl: './projects/arcade/index.html'
+  }
 ]

@@ -1,22 +1,46 @@
 ////////////////////////////
 //   Contact SCSS File   //
 //////////////////////////
-@import "var";
-@import "animation";
-@import "other_mixin";
-
-.contact {
-  height: 800px;
-  line-height: 200px;
-  filter: $svgShadow;
-}
-
 .contact__title {
   @include neon_subtitles; //located at other mixin
-  transform: translate(-60px, 230px);
+  transform: translate(-60px, 160px);
 }
 
 .contact__mailbox {
   display: block;
   margin: auto;
+  margin-bottom: 100px;
+  filter: $svgShadow;
+}
+
+.contact__circle-one {
+  width: 400px;
+  height: 400px;
+  @include circles;
+  @include circles_rotate;
+}
+
+.contact__circle-two {
+  width: 330px;
+  height: 330px;
+  @include circles;
+  @include circles_rotate_two;
+  animation-delay: 1s;
+}
+
+.contact__letter--email {
+  width: 350px;
+  height: 60px;
+  background-color: $opaqueBlack;
+  border-radius: 20px;
+  padding: 19px;
+  filter: $svgShadow;
+  @include absolute_position;
+  font-family: $subtitleFont;
+  text-shadow: $neonBlue;
+  text-align: center;
+  color: $lightBlue;
+  transform: translateY(240px);
+  z-index: 2;
+  letter-spacing: 2px;
 }

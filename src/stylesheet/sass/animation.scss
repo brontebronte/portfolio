@@ -198,7 +198,7 @@
 }
 
 @mixin sparkling {
-  @include animate(sparkling, 2.2s, infinite, ease-in-out, both);
+  @include animate(sparkling, 2.2s, infinite, ease-in, both);
 }
 
 
@@ -219,15 +219,14 @@
 //  Clouds  //
 @include keyframes (cloud) {
   0% {
-    width:0px;
     filter: brightness(0.2);
   }
   30% {
-    width:400px;
     filter: brightness(0.2);
   }
   50%{
     filter: brightness(1);
+    opacity: 0.5;
   }
   70%{
     filter: brightness(0.2);
@@ -236,11 +235,125 @@
     filter: brightness(1);
   }
   100% {
-    width:400px;
-    filter: brightness(0.2);
+    width:320px;
+    opacity: 0.8;
   }
 }
 
 @mixin cloudsMove {
-  @include animate(cloud, 5s, 1, linear, forwards);
+  @include animate(cloud, 3s, 1, linear, forwards);
+}
+
+// light bulb move and flicker  //
+@include keyframes (light) {
+  30% {
+    transform-origin: top;
+    transform: translate(80px, -90px) rotate(15deg);
+    filter: brightness(0.3);
+  }
+  50%{
+    transform-origin: top;
+    transform: translate(80px, -90px) rotate(-15deg);
+    filter: brightness(1);
+  }
+  70% {
+    transform-origin: top;
+    transform: translate(80px, -90px) rotate(15deg);
+    filter: brightness(0.3);
+  }
+  100%{
+    transform-origin: top;
+    transform: translate(80px, -90px) rotate(0deg);
+    filter: brightness(1);
+  }
+}
+
+@mixin lightMove {
+  @include animate(light, 4s, 1, ease, none);
+}
+
+
+//  milk carton move  //
+@include keyframes (milk_carton) {
+  from {
+    transform: translate(30px, -190px);
+    opacity: 1;
+  }
+  to {
+    transform: translate(30px, -190px) rotate(20deg);
+    opacity: 0;
+  }
+}
+
+@mixin milk_carton {
+  @include animate(milk_carton, 2s, 1, ease-in-out, forwards);
+}
+
+//  gallery title  //
+@include keyframes (gallery_title) {
+  from {
+    transform: translate(-20px, 160px);
+  }
+  to {
+    transform: translate(-20px, -220px);
+  }
+}
+
+@mixin gallery_title {
+  @include animate(gallery_title, 2s, 1, ease-in-out, forwards);
+}
+
+//  Opacity - Fade Out  //
+@include keyframes (fade) {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@mixin fade {
+  @include animate(fade, 2s, 1, ease-in, forwards);
+}
+
+//   circles rotate  //
+@include keyframes (circles_rotate) {
+  0% {
+    transform: scale(0.5) translateY(70px) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3) translateY(70px) rotate(-180deg);
+    filter: brightness(0.5) $svgShadow;
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(0) translateY(70px) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+@mixin circles_rotate {
+  @include animate(circles_rotate, 6s, infinite, ease-in-out, forwards);
+}
+
+@include keyframes (circles_rotate_two) {
+  0% {
+    transform: scale(0.5) translateY(101px) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3) translateY(101px) rotate(180deg);
+    filter: brightness(0.5) $svgShadow;
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(0) translateY(101px) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+@mixin circles_rotate_two {
+  @include animate(circles_rotate_two, 3s, infinite, ease-in-out, forwards);
 }

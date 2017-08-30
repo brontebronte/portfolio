@@ -20,6 +20,7 @@ import cloudOne from './image/cloud-top.png';
 import cloudTwo from './image/cloud-middle.png';
 import cloudThree from './image/cloud-lower.png';
 import logoSkill from './image/skill_logo.png';
+import light from './image/light.svg';
 
 
 /////////////////////
@@ -61,6 +62,12 @@ class About extends Component {
           <img className="about__cloud-two" src={cloudTwo} alt="cloud" />
           <img className="about__cloud-three" src={cloudThree} alt="cloud" />
         </div>
+        <div className="about__light">
+          <div className="about__light--wire"></div>
+          <img className="about__light--bulb" src={light} alt="light bulb" />
+          <div className="about__light--shine"></div>
+        </div>
+        <div className="back"></div>
       </div>
     );
   }

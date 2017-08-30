@@ -1,0 +1,219 @@
+html, body {
+  font-family: Arial;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  height: 100%;
+}
+
+hr {
+  border-color: grey;
+  width: 80%;
+}
+
+/*Whole Menu Bar + Menu Tab on the Left*/
+  #container {
+    position: fixed;
+    z-index: 50;
+    height: 100% ;
+    margin: 0;
+    display: flex;
+    width: 352px;
+    transition: 0.3s ease-in-out;
+  }
+
+  #container.close {
+    transform: translateX(-70%);
+    overflow: hidden;
+  }
+
+
+/*Upper Menu - incld title, marker icon and buttons, search input*/
+.upper-option-box {
+  padding-top: 12%;
+}
+
+/*Menu Tab*/
+  #open-option-tab {
+    background-color: black;
+    width: 10%;
+    height: 22%;
+    opacity: 0.85;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 0px 40px 40px 0px;
+    text-align: center;
+    color: #f9c889;
+    padding-top: 30px;
+    line-height: 2em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+  }
+
+  #open-option-tab:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+/*Title/Header in Menu*/
+  #title-option-box {
+    color: #f9c889;
+    font-size: 1.8em;
+    padding: 5%;
+    letter-spacing: 0.3em;
+    text-align: center;
+    margin-bottom: 4;
+  }
+
+/*Whole Menu Bar- without tab*/
+  #option-box {
+    background-color: black;
+    opacity: 0.85;
+    height: 100%;
+    width:70%;
+  }
+
+/*Marker Selection Buttons*/
+  .marker-buttons {
+    text-align: center;
+  }
+
+  .marker-icon {
+    color: white !important;
+    z-index: 60 !important;
+    text-align: center;
+    font-size: 1.8em;
+  }
+
+  #show {
+    margin-right: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-size: 0.85em;
+    background-color: black;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: white;
+    color: white;
+    letter-spacing: 0.3em;
+    transition: .3s;
+  }
+
+  #show:focus {
+    background-color: #333131;
+    outline: none;
+  }
+
+  #show:hover {
+    background-color: #333131;
+    cursor: pointer;
+  }
+
+  #hide {
+    margin-right: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-size: 0.85em;
+    background-color: black;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: white;
+    color: white;
+    letter-spacing: 0.3em;
+    transition: .3s;
+  }
+
+  #hide:focus {
+    background-color: #7c3939;
+    outline: none;
+  }
+
+  #hide:hover {
+    background-color: #7c3939;
+    cursor: pointer;
+  }
+
+  #reset {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-size: 0.85em;
+    background-color: black;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: white;
+    color: white;
+    letter-spacing: 0.3em;
+    transition: .3s;
+  }
+
+  #reset:focus {
+    background-color: #eda138;
+    outline: none;
+  }
+
+  #reset:hover {
+    background-color: #eda138;
+    cursor: pointer;
+  }
+
+/*Search Box for Marker (based on geocode or address etc)*/
+  .search-box {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 8%;
+  }
+
+  #zoom-to-area-text {
+    border-radius: 10px;
+    padding: 3%;
+    background-color: black;
+    border-width: 1px;
+    border-color: white;
+    color: #96ccd1;
+    margin-right: 0%;
+  }
+
+  #zoom-to-area-text:focus {
+    outline: none;
+  }
+
+/*Marker List/Details on menu container (linked to marker on map- click)*/
+  #markerListings {
+    height: 68%;
+    overflow: scroll;
+  }
+
+  .markerWhole {
+    padding-top: 5%;
+    padding-bottom: 2.3%;
+    padding-left: 8.2%;
+    padding-right: 8.2%;
+    transition: .2s;
+  }
+
+  .markerWhole:hover {
+    background-color: white;
+    opacity: 0.65;
+    cursor: pointer;
+  }
+
+  .markerTitle {
+    list-style: none;
+    color: #96ccd1;
+    letter-spacing: 0.1em;
+  }
+
+  .markerLoc {
+    font-size: 0.8em;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    color: darkgrey;
+  }
+
+/*Info Window Info*/
+.locAdress {
+  width: 160px;
+  padding-top: 5px;
+}

@@ -12,10 +12,39 @@ import React, { Component } from 'react';
 import character from './image/menu_character.svg';
 import glasses from './image/glasses.svg';
 
+// Variables
+var menuVar = [
+  {
+    menuTitle:'home sweet home',
+    menuLoc:'100px'
+  },
+  {
+    menuTitle:'about',
+    menuLoc:'200px'
+  },
+  {
+    menuTitle:'gallery',
+    menuLoc:'300px'
+  },
+  {
+    menuTitle:'contact',
+    menuLoc:'400px'
+  },
+]
+
 
 /////////////////////
 //   Components   //
 class Menu extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state={
+      menuVar
+    };
+  }
+
   render() {
     return (
       <div className="menu">

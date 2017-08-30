@@ -9,6 +9,7 @@ $lightPinkColor: #fdebfd ;
 $greyColor: grey;
 $lightBlue: #eff9ff;
 $darkWoodBack: "../../image/dark_wood.png";
+$opaqueBlack: rgba(0, 0, 0, 0.6);
 
 /////////////////
 //   Fonts    //
@@ -33,6 +34,7 @@ $sparklesPositionY: -780px;
 //  Shadows   //
 $mainShadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.2), 0 20px 30px 0 rgba(0, 0, 0, 0.19);
 $svgShadow: drop-shadow(10px 10px 15px black);
+$insetShadow: inset 0 0 10px #000000;
 
 //////////////////
 //  Animation  //

@@ -37,7 +37,6 @@
   height: 300px;
   margin: 200px auto;
   perspective: 800px;
-  margin-bottom: 600px;
   cursor: pointer;
 }
 
@@ -118,7 +117,7 @@
   width: 464px;
   transform: translate(-69px, 90px);
   filter: brightness(0.4) contrast(130%) $svgShadow;
-  transition: 2.1s ease-in;
+  transition: 1s ease-in;
 }
 
 // arrow  //
@@ -192,7 +191,7 @@
 
 .about__cloud-one{
   @include cloud;
-  transform: translate(-100px, -170px);
+  transform: translate(-120px, -150px);
 }
 
 .about__cloud-two{
@@ -204,6 +203,59 @@
 
 .about__cloud-three{
   @include cloud;
-  transform: translate(30px, 250px);
+  transform: translate(80px, 250px);
   animation-delay: 0.4s;
+}
+
+//  light bulb  //
+.about__light {
+  @include relative_position;
+  width: 200px;
+  transform: translate(80px, -90px);
+  z-index: -1;
+  @include lightMove;
+}
+
+.about__light--bulb {
+  width: 70px;
+  transform: translateX(-31px);
+  filter: $svgShadow;
+}
+
+.about__light--wire {
+  width: 3px;
+  height: 400px;
+  background-color: #51203E;
+  filter: $svgShadow;
+}
+
+.about__light--shine {
+  width: 190px;
+  height: 40px;
+  @include absolute_position;
+  border-radius: 50%;
+  background-color: $lightBlue;
+  box-shadow: $neonBlue;
+  transform: translate(-95px, -70px);
+  z-index: -1;
+  filter: blur(32px) saturate(1.7);
+}
+
+.back {
+  width: 65px;
+  height: 65px;
+  background-color: $opaqueBlack;
+  box-shadow: $insetShadow;
+  z-index: 3;
+  position: fixed;
+  top: 2%;
+  right: 2%;
+  border-radius: 20%;
+  transition: 1s ease;
+  filter: contrast(115%);
+  cursor: pointer;
+  &:hover {
+    box-shadow: $mainShadow;
+    border-radius: 50%;
+  }
 }

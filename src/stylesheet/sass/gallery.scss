@@ -1,15 +1,126 @@
 ////////////////////////////
 //   Gallery SCSS File   //
 //////////////////////////
+.gallery {
+  margin-bottom: 200px;
+}
 
 .gallery__title {
-  @include neon_subtitles; //located at other mixin
-  transform: translate(-20px, 350px);
+  @include gallery_title;
+  transform: translate(-20px, 160px);
+  animation-delay: 3.1s;
+  display: block;
+  margin: auto;
+  font-family: $titleFont;
+  font-size: $titleFontSize;
+  color: $lightPinkColor;
+  text-shadow: $neonPink;
+  position: relative;
+  width: 300px;
+  text-align: center;
+  z-index: 1;
 }
 
 .gallery__milk {
   display: block;
   margin: auto;
   filter: $svgShadow contrast(120%) brightness(0.7);
-  transform: translateX(30px);
+  transform: translate(30px, -190px);
+  @include milk_carton;
+  position: relative;
+  animation-delay: 2s;
+  width: 350px;
+  z-index: -1;
+}
+
+.gallery__preview {
+  @include absolute_position;
+  width: 720px;
+  height: 537px;
+  transform: translateY(-635px);
+  color: white;
+  @include fade;
+  animation-delay: 5s;
+  opacity: 0;
+}
+
+.gallery__preview--search {
+  @include absolute_position;
+  width: 350px;
+  height: 70px;
+  background-color: $opaqueBlack;
+  padding: 5px;
+  transform: translate(160px, 4px);
+  box-shadow: $insetShadow;
+  @include fade;
+  animation-delay: 5s;
+  opacity: 0;
+}
+
+.gallery__preview--search-input {
+  border-radius: 10px;
+  padding: 3%;
+  background-color: $opaqueBlack;
+  border-width: 1px;
+  border-color: white;
+  color: $lightPinkColor;
+  margin-right: 0%;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  width: 300px;
+  font-family: $subtitleFont;
+  font-size: 15px;
+  &:focus {
+    outline: none;
+  }
+}
+
+.gallery__preview--view {
+  @include absolute_position;
+  width: 331px;
+  height: 532px;
+  background-color: $opaqueBlack;
+  padding: 5px;
+  transform: translate(-180px, 4px);
+  margin-bottom: 200px;
+  box-shadow: $insetShadow;
+}
+
+.gallery__preview--projects {
+  @include absolute_position;
+  width: 350px;
+  height: 462px;
+  background-color: $opaqueBlack;
+  padding: 5px;
+  transform: translate(160px, 74px);
+  overflow-y: scroll;
+  box-shadow: $insetShadow;
+}
+
+.gallery__preview--group-pic {
+  width: 100px;
+}
+
+.gallery__preview--group {
+  list-style: none;
+  transition: 0.5s ease-in;
+  padding: 18px;
+  font-family: $subtitleFont;
+  color: $lightBlue;
+  text-shadow: $neonBlue;
+  cursor: pointer;
+  &:hover {
+    background-color: black;
+    color: $lightPinkColor;
+    text-shadow: $neonPink;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 20px;
+  }
+}
+
+.gallery__preview--group-name {
+  float: right;
 }
