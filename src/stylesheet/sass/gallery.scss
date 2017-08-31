@@ -93,7 +93,7 @@
   height: 462px;
   background-color: $opaqueBlack;
   padding: 5px;
-  transform: translate(160px, 74px);
+  transform: translate(160px, 58px);
   overflow-y: scroll;
   box-shadow: $insetShadow;
 }
@@ -104,7 +104,7 @@
 
 .gallery__preview--group {
   list-style: none;
-  transition: 0.5s ease-in;
+  transition: 0.8s ease-in;
   padding: 18px;
   font-family: $subtitleFont;
   color: $lightBlue;

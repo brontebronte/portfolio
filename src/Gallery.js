@@ -11,37 +11,6 @@ import React, { Component } from 'react';
 // Images
 import milk from './image/milkcarton.svg';
 
-// Variables
-var galleryVar = [
-  {
-    galleryId: 1,
-    galleryName:'Google Map API',
-    galleryDescription:'Project which includes Google API, Foursquare API and Knockout JS, part of Udacity',
-    galleryPic: require('./image/project_pic/googlemap.png'),
-    galleryUrl: './projects/google_map/index.html'
-  },
-  {
-    galleryId: 2,
-    galleryName:'Feed Reader',
-    galleryDescription:'Utilizing Jasmine, as part of Udacity course',
-    galleryPic: require('./image/project_pic/jasmine.png'),
-    galleryUrl: './projects/feed_reader/index.html'
-  },
-  {
-    galleryId: 3,
-    galleryName:'Web Optimization',
-    galleryDescription:'Optimizing web given by Udacity, utilizing google developer tool and Gulp',
-    galleryPic: require('./image/project_pic/weboptimize.png'),
-    galleryUrl: './projects/web_op/views/pizza.html'
-  },
-  {
-    galleryId: 4,
-    galleryName:'Frogger Game Arcade	',
-    galleryDescription:'Utilizes Javascript Object Orientated Programming',
-    galleryPic: require('./image/project_pic/gamearcade.png'),
-    galleryUrl: './projects/arcade/index.html'
-  }
-]
 
 /////////////////////
 //   Components   //
@@ -50,61 +19,80 @@ var galleryVar = [
 class Gallery extends Component {
 
   constructor(props) {
-    super(props);
+    super(props)
+    this.state = {
+      filterText: ''
+    }
+  }
+
+  filterUpdate(value) {
+    this.setState({
+      filterText: value
+    });
   }
 
   render() {
+
     return (
       <div className="gallery">
         <h2 className="gallery__title">gallery</h2>
         <img className="gallery__milk" src={milk} alt="milk carton" />
         <div className="gallery__preview">
-          <SearchGallery />
-            <main className="gallery__list">
-              <ProjectList />
-              <ViewGallery />
-            </main>
+          <SearchGallery
+          filterText={this.state.filterText}
+          filterUpdate={this.filterUpdate.bind(this)}
+          />
+          <main className="gallery__list">
+            <GalleryProjects
+            data={this.props.data}
+            filterText={this.state.filterText}
+            />
+            <ViewGallery />
+          </main>
         </div>
       </div>
     );
   }
 }
 
-// Append list of projects onto the gallery, just mini pic and title
-class ProjectList extends Component {
-    constructor(props) {
-      super(props);
 
-      // ties objects from galleryVar to this.state
-      this.state = {
-        galleryVar
-      };
-    }
+// append project onto gallery
+class GalleryProjects extends Component {
+  render() {
+    const { data, filterText } = this.props;
 
-    render() {
-      return (
-        <div className="gallery__preview--projects">
-          {this.state.galleryVar.map((galleryVar, index) =>
-            <li className="gallery__preview--group" key={galleryVar.galleryId}>
-              <img className="gallery__preview--group-pic" src={galleryVar.galleryPic} alt="project preview" />
-              <h4 className="gallery__preview--group-name">{galleryVar.galleryName}</h4>
-            </li>
-          )}
-        </div>
-      )
-    }
+    const galleryList = data
+      .filter(galleryProject => {
+        //remove projects that do not match current filter text
+        return (galleryProject.galleryName.toLowerCase().indexOf(filterText.toLowerCase()) >= 0)
+      })
+      .map(galleryProject => {
+        //pretty much loops through the objects to append
+        return (
+          <li className="gallery__preview--group" key={galleryProject.galleryId}>
+            <img className="gallery__preview--group-pic" src={galleryProject.galleryPic} alt='projects done' />
+            <h4 className="gallery__preview--group-name">{galleryProject.galleryName}</h4>
+          </li>
+        )
+      })
 
+    return (
+      <ul className="gallery__preview--projects">
+        {galleryList}
+      </ul>
+    );
+  }
 }
 
 
 // search input to filter project gallery list
 class SearchGallery extends Component {
 
-  filterUpdate(){
+  filterUpdate(e){
     // connects to input via ref, value refers to whatever is typed
     // onChange allows, upon key down the function will execute
     const val = this.myValue.value;
-    console.log(val);
+    this.props.filterUpdate(val)
   }
 
   render() {
