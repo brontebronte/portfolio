@@ -33,12 +33,32 @@
   z-index: -1;
 }
 
+.gallery__bunny {
+  @include absolute_position;
+  transform: translate(200px, -710px);
+  width: 170px;
+  filter: $svgShadow brightness(0.5);
+  @include fade;
+  opacity: 0;
+  animation-delay: 5s;
+}
+
+.gallery__circle {
+  width: 400px;
+  height: 400px;
+  @include circles;
+  transform: translate(-10px, -800px) scale(1);
+  z-index: -2;
+  filter: $svgShadow brightness(0.4);
+  @include circles_gallery;
+  animation-delay: 3s;
+}
+
 .gallery__preview {
   @include absolute_position;
-  width: 720px;
-  height: 537px;
+  width: 700px;
+  height: 500px;
   transform: translateY(-635px);
-  color: white;
   @include fade;
   animation-delay: 5s;
   opacity: 0;
@@ -48,10 +68,8 @@
   @include absolute_position;
   width: 350px;
   height: 70px;
-  background-color: $opaqueBlack;
   padding: 5px;
-  transform: translate(160px, 4px);
-  box-shadow: $insetShadow;
+  transform: translate(166px, 90px);
   @include fade;
   animation-delay: 5s;
   opacity: 0;
@@ -61,66 +79,123 @@
   border-radius: 10px;
   padding: 3%;
   background-color: $opaqueBlack;
-  border-width: 1px;
+  border-width: 0.2px;
   border-color: white;
   color: $lightPinkColor;
   margin-right: 0%;
   display: block;
   margin: auto;
   margin-top: 10px;
-  width: 300px;
-  font-family: $subtitleFont;
-  font-size: 15px;
+  width: 290px;
+  font-family: $galleryFont;
+  font-size: 13px;
+  box-shadow: $insetShadow;
   &:focus {
     outline: none;
   }
 }
 
-.gallery__preview--view {
-  @include absolute_position;
-  width: 331px;
-  height: 532px;
-  background-color: $opaqueBlack;
-  padding: 5px;
-  transform: translate(-180px, 4px);
-  margin-bottom: 200px;
-  box-shadow: $insetShadow;
-}
-
 .gallery__preview--projects {
   @include absolute_position;
-  width: 350px;
-  height: 462px;
-  background-color: $opaqueBlack;
+  width: 330px;
+  height: 300px;
   padding: 5px;
-  transform: translate(160px, 58px);
+  transform: translate(160px, 150px);
   overflow-y: scroll;
-  box-shadow: $insetShadow;
 }
 
 .gallery__preview--group-pic {
-  width: 100px;
+  width: 110px;
+  box-shadow: $mainShadow;
 }
 
 .gallery__preview--group {
   list-style: none;
-  transition: 0.8s ease-in;
+  transition: 0.4s ease-in;
   padding: 18px;
-  font-family: $subtitleFont;
+  font-family: $galleryFont;
   color: $lightBlue;
-  text-shadow: $neonBlue;
   cursor: pointer;
+  font-size: 14px;
   &:hover {
-    background-color: black;
-    color: $lightPinkColor;
-    text-shadow: $neonPink;
-    border-color: white;
-    border-style: solid;
+    color: $lightBlue;
+    text-shadow: $neonBlue;
     border-width: 1px;
-    border-radius: 20px;
+    border-radius: 5px;
+    box-shadow: $insetShadow;
+  }
+  &:hover > .gallery__preview--group-pic {
+    box-shadow: $insetShadow;
   }
 }
 
 .gallery__preview--group-name {
   float: right;
+}
+
+ //  clicked item display
+ .gallery__preview--view {
+   @include absolute_position;
+   width: 331px;
+   padding: 5px;
+   transform: translate(-180px, -8px);
+   margin-bottom: 200px;
+   color: $lightBlue;
+ }
+
+.gallery__preview--view-pic {
+  width: $galleryPreviewWidth;
+  margin: 0;
+  padding: 0;
+  box-shadow: $mainShadow;
+}
+
+.gallery__preview--view-title {
+  font-family: $subtitleFont;
+  width: $galleryPreviewWidth;
+  height: 50px;
+  background-color: $opaqueBlack;
+  margin-bottom: 0;
+  float: left;
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+  box-shadow: $mainShadow;
+  color: $lightPinkColor;
+  text-shadow: $neonPink;
+  letter-spacing: 3px;
+  font-size: 16px;
+}
+
+.gallery__preview--view-description {
+  font-family: $galleryFont;
+  padding: 10px;
+  width: $galleryPreviewWidth;
+  height: auto;
+  border-radius: 0 0 20px 20px;
+  background-color: $opaqueBlack;
+  margin-top: 0;
+  font-size: 13px;
+  transform: translateY(-3px);
+  box-shadow: $mainShadow;
+}
+
+.gallery__preview--view-description-link {
+  text-align: center;
+  background-color: black;
+  padding: 10px 60px 10px 60px;
+  margin-bottom: 10px;
+  border-radius: 10px 10px 0 0;
+  color: $lightPinkColor;
+  text-shadow: $neonPink;
+  font-size: 15px;
+  margin-left: 80px;
+  text-decoration: none;
+  transition: 0.5s ease-in-out;
+  opacity: 0.7;
+  &:hover {
+    opacity: 1;
+    letter-spacing: 2px;
+    margin-left: 76px;
+    font-size: 16px;
+  }
 }

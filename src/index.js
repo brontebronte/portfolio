@@ -6,16 +6,19 @@
 //   Imports   //
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 import Name from './Name';
 import Menu from './Menu';
 import About from './About';
 import Gallery from './Gallery';
 import Contact from './Contact';
-import projectData from './project_data';
 import menuData from './menu_data.js';
+import allReducers from './reducers';
 import './stylesheet/css/main.css';
 import registerServiceWorker from './registerServiceWorker';
 
+let store = createStore(allReducers);
 
 ////////////////////////////
 //   Renders onto html   //
@@ -28,7 +31,7 @@ registerServiceWorker();
 ReactDOM.render(<About />, document.getElementById('about-react'));
 registerServiceWorker();
 
-ReactDOM.render(<Gallery data={projectData} />, document.getElementById('gallery-react'));
+ReactDOM.render(<Provider store={store}><Gallery /></Provider>, document.getElementById('gallery-react'));
 registerServiceWorker();
 
 ReactDOM.render(<Contact />, document.getElementById('contact-react'));

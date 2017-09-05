@@ -13,8 +13,6 @@ import fish from './image/fish_blue.svg';
 import fishBone from './image/fish_bone.svg';
 import hands from './image/hands.svg';
 import arrow from './image/about_arrow.svg';
-import sparkleOne from './image/sparkleone.png';
-import sparkleTwo from './image/sparkletwo.png';
 import plate from './image/plate.svg';
 import cloudOne from './image/cloud-top.png';
 import cloudTwo from './image/cloud-middle.png';
@@ -29,11 +27,6 @@ class About extends Component {
   render() {
     return (
       <div className="about">
-        <div className="about__sparkles">
-          <img className="about__sparkles--one" src={sparkleOne} alt="sparkle" />
-          <img className="about__sparkles--two" src={sparkleTwo} alt="sparkle" />
-          <img className="about__sparkles--three" src={sparkleTwo} alt="sparkle" />
-        </div>
         <div className="about__container">
           <div className="about__box">
             <div className="about__front"><br />
@@ -67,7 +60,9 @@ class About extends Component {
           <img className="about__light--bulb" src={light} alt="light bulb" />
           <div className="about__light--shine"></div>
         </div>
-        <div className="back"></div>
+        <div className="back">
+          <i className="fa fa-angle-double-up" aria-hidden="true"></i>
+        </div>
       </div>
     );
   }

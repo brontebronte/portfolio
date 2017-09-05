@@ -14,7 +14,8 @@ $opaqueBlack: rgba(0, 0, 0, 0.6);
 /////////////////
 //   Fonts    //
 $subtitleFont: 'Cutive Mono', cursive;
-$titleFont: "Megrim", sans-serif;
+$titleFont: 'Megrim', sans-serif;
+$galleryFont: 'Quicksand', sans-serif;
 $titleFontSize: 2.5em;
 $subtitleFontSize: 1.3em;
 $neonPink: 0 0 20px #da36d9, 0 0 10px $lightPinkColor, 0 0 40px #F33CF2, 0 0 70px #da36d9, 0 0 80px #da36d9, 0 0 100px #da36d9, 0 0 130px #da36d9;
@@ -27,7 +28,9 @@ $menuTranformY: 40px;
 $contextLetterSpacing: 2px;
 $arrowTranformOrigin: 162px 45%;
 $arrowTranformTranslate: -85px, 187px;
-$sparklesPositionY: -780px;
+$sparklesPositionY: -330px;
+$galleryPreviewWidth: 325px;
+
 
 
 //////////////////

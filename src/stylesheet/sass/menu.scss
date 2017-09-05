@@ -186,3 +186,30 @@
   animation-delay: $doorDelay;
   z-index: 2;
 }
+
+//  Sparkles  //
+.menu__sparkles {
+  visibility: hidden;
+}
+
+.menu__sparkles--one {
+  @include absolute_position;
+  @include sparkling;
+  animation-delay: 3s;
+  height: 400px;
+}
+
+.menu__sparkles--two {
+  @include absolute_position;
+  transform: translateY($sparklesPositionY);
+  @include sparkling;
+  height: 520px;
+  animation-delay: 2s;
+}
+
+.menu__sparkles--three {
+  transform: translateY($sparklesPositionY);
+  @include absolute_position;
+  @include sparkling;
+  animation-delay: 3.7s;
+}

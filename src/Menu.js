@@ -11,6 +11,8 @@ import React, { Component } from 'react';
 // Images
 import character from './image/menu_character.svg';
 import glasses from './image/glasses.svg';
+import sparkleOne from './image/sparkleone.png';
+import sparkleTwo from './image/sparkletwo.png';
 
 
 /////////////////////
@@ -522,6 +524,11 @@ class Menu extends Component {
           <img className="menu__elevator--character" src={character} alt="a girl perching up" />
           <img className="menu__elevator--glasses" src={glasses} alt="glasses" />
           <p className="menu__elevator--pompom"><strong>o</strong></p>
+        </div>
+        <div className="menu__sparkles">
+          <img className="menu__sparkles--one" src={sparkleOne} alt="sparkle" />
+          <img className="menu__sparkles--two" src={sparkleTwo} alt="sparkle" />
+          <img className="menu__sparkles--three" src={sparkleTwo} alt="sparkle" />
         </div>
       </div>
     );

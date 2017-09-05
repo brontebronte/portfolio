@@ -2,32 +2,7 @@
 //   About SCSS File   //
 /////////////////////////
 
-//  Sparkles  //
-.about__sparkles {
-  visibility: hidden;
-}
 
-.about__sparkles--one {
-  @include absolute_position;
-  @include sparkling;
-  animation-delay: 3s;
-  height: 400px;
-}
-
-.about__sparkles--two {
-  @include absolute_position;
-  transform: translateY($sparklesPositionY);
-  @include sparkling;
-  height: 520px;
-  animation-delay: 2s;
-}
-
-.about__sparkles--three {
-  transform: translateY($sparklesPositionY);
-  @include absolute_position;
-  @include sparkling;
-  animation-delay: 3.7s;
-}
 
 
 //  Context  //
@@ -242,20 +217,21 @@
 }
 
 .back {
-  width: 65px;
-  height: 65px;
-  background-color: $opaqueBlack;
-  box-shadow: $insetShadow;
+  width: 55px;
+  height: 55px;
   z-index: 3;
   position: fixed;
-  top: 2%;
-  right: 2%;
-  border-radius: 20%;
+  bottom: 1%;
+  right: 1%;
   transition: 1s ease;
-  filter: contrast(115%);
   cursor: pointer;
+  filter: brightness(0.6);
+  color: $lightBlue;
+  text-align: center;
+  font-size: 50px;
+  text-shadow: $neonBlue;
   &:hover {
-    box-shadow: $mainShadow;
-    border-radius: 50%;
+    filter: brightness(0.9);
+    font-size: 56px;
   }
 }

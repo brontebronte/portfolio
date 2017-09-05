@@ -192,7 +192,7 @@
     transform: translateY($sparklesPositionY);
   }
   to {
-    transform: translateY(-680px);
+    transform: translateY(-200px);
     visibility: visible;
   }
 }
@@ -356,4 +356,39 @@
 
 @mixin circles_rotate_two {
   @include animate(circles_rotate_two, 3s, infinite, ease-in-out, forwards);
+}
+
+
+@include keyframes (circles_rotate_three) {
+  0% {
+    transform: scale(0.5) translateY(-50px) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3) translateY(-50px) rotate(180deg);
+    filter: brightness(0.5) $svgShadow;
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(0) translateY(-50px) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+@mixin circles_rotate_three {
+  @include animate(circles_rotate_three, 6s, infinite, ease-in-out, forwards);
+}
+
+// circle gallery
+@include keyframes (circles_gallery) {
+  from {
+    transform: translate(-10px, -800px) scale(1);
+  }
+  to {
+    transform: translate(150px, -850px) scale(0.4);
+  }
+}
+
+@mixin circles_gallery {
+  @include animate(circles_gallery, 3s, 1, ease-in-out, forwards);
 }

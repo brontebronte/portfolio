@@ -1,16 +1,19 @@
 ////////////////////////////
 //   Contact SCSS File   //
 //////////////////////////
+.contact {
+  margin-bottom: 50px;
+}
 .contact__title {
   @include neon_subtitles; //located at other mixin
-  transform: translate(-60px, 160px);
+  transform: translate(-60px, 150px);
 }
 
 .contact__mailbox {
   display: block;
   margin: auto;
-  margin-bottom: 100px;
   filter: $svgShadow;
+  width: 300px;
 }
 
 .contact__circle-one {
@@ -25,6 +28,14 @@
   height: 330px;
   @include circles;
   @include circles_rotate_two;
+  animation-delay: 1s;
+}
+
+.contact__circle-three {
+  width: 300px;
+  height: 300px;
+  @include circles;
+  @include circles_rotate_three;
   animation-delay: 1s;
 }
 
@@ -43,4 +54,12 @@
   transform: translateY(240px);
   z-index: 2;
   letter-spacing: 2px;
+}
+
+.contact__bunny{
+  @include absolute_position;
+  transform: translate(10px, -660px) rotate(20deg);
+  filter: $svgShadow brightness(0.4);
+  width: 260px;
+  z-index: -1;
 }
