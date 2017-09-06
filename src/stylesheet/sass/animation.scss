@@ -392,3 +392,19 @@
 @mixin circles_gallery {
   @include animate(circles_gallery, 3s, 1, ease-in-out, forwards);
 }
+
+
+// loading animation
+@include keyframes (load) {
+  from {
+    transform: translateX(-2000px);
+  }
+  to {
+    transform: translateX(2000px);
+    letter-spacing: 4px;
+  }
+}
+
+@mixin load {
+  @include animate(load, 3s, infinite, ease-in-out, forwards);
+}

@@ -18,7 +18,7 @@ import logo from './image/logo.svg';
 class Name extends Component {
   render() {
     return (
-      <div className="name">
+      <div id="name">
         <img className="name__logo" src={logo} alt="logo" />
         <p className="name__title">brontë</p>
       </div>

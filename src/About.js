@@ -7,6 +7,7 @@
 
 // React
 import React, { Component } from 'react';
+import ReallySmoothScroll from 'really-smooth-scroll';
 
 // Images
 import fish from './image/fish_blue.svg';
@@ -21,12 +22,16 @@ import logoSkill from './image/skill_logo.png';
 import light from './image/light.svg';
 
 
+// Really smooth scroll call
+ReallySmoothScroll.shim();
+
+
 /////////////////////
 //   Components   //
 class About extends Component {
   render() {
     return (
-      <div className="about">
+      <div id="about">
         <div className="about__container">
           <div className="about__box">
             <div className="about__front"><br />
@@ -60,7 +65,7 @@ class About extends Component {
           <img className="about__light--bulb" src={light} alt="light bulb" />
           <div className="about__light--shine"></div>
         </div>
-        <div className="back">
+        <div className="back" onClick={() => window.scrollTo(0,0)}>
           <i className="fa fa-angle-double-up" aria-hidden="true"></i>
         </div>
       </div>

@@ -42,7 +42,7 @@ class Gallery extends Component {
   render() {
 
     return (
-      <div className="gallery">
+      <div id="gallery">
         <h2 className="gallery__title">gallery</h2>
         <img className="gallery__milk" src={milk} alt="milk carton" />
         <img className="gallery__bunny" src={bunny} alt="bunny" />
@@ -136,7 +136,7 @@ class ViewGallery extends Component {
       return (
         <div className="gallery__preview--view">
           <h3 className="gallery__preview--view-title">{projects[0].galleryName}</h3>
-          <img className="gallery__preview--view-pic" src={projects[0].galleryPic} />
+          <img className="gallery__preview--view-pic" src={projects[0].galleryPic} alt="project snapshot"/>
           <div className="gallery__preview--view-description">
             <p className="gallery__preview--view-description-sentence">{projects[0].galleryDescription}</p>
             <br />
@@ -148,7 +148,7 @@ class ViewGallery extends Component {
     return (
       <div className="gallery__preview--view">
         <h3 className="gallery__preview--view-title">{active.galleryName}</h3>
-        <img className="gallery__preview--view-pic" src={active.galleryPic} />
+        <img className="gallery__preview--view-pic" src={active.galleryPic} alt="project snapshot"/>
         <div className="gallery__preview--view-description">
           <p className="gallery__preview--view-description-sentence">{active.galleryDescription}</p>
           <br />

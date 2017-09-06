@@ -7,6 +7,7 @@
 
 // React
 import React, { Component } from 'react';
+import ReallySmoothScroll from 'really-smooth-scroll';
 
 // Images
 import character from './image/menu_character.svg';
@@ -15,17 +16,26 @@ import sparkleOne from './image/sparkleone.png';
 import sparkleTwo from './image/sparkletwo.png';
 
 
+// Really smooth scroll call
+ReallySmoothScroll.shim();
+
 /////////////////////
 //   Components   //
 class Menu extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: true,
+    };
+  }
 
   render() {
     return (
-      <div className="menu">
+      <div id="menu">
         <ul className="menu-list">
-          <li className="menu-list__item menu-list__item-one">about</li>
-          <li className="menu-list__item menu-list__item-two">gallery</li>
-          <li className="menu-list__item menu-list__item-three">contact</li>
+          <li className="menu-list__item menu-list__item-one" onClick={() => window.scrollTo(0,960)}>about</li>
+          <li className="menu-list__item menu-list__item-two" onClick={() => window.scrollTo(0,2000)}>gallery</li>
+          <li className="menu-list__item menu-list__item-three" onClick={() => window.scrollTo(0,3000)}>contact</li>
           <div className="menu-list__arrow"></div>
           <div className="menu-list__level">home sweet home</div>
         </ul>

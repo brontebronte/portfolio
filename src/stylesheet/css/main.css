@@ -741,6 +741,34 @@
   to {
     transform: translate(150px, -850px) scale(0.4); } }
 
+@-webkit-keyframes load {
+  from {
+    transform: translateX(-2000px); }
+  to {
+    transform: translateX(2000px);
+    letter-spacing: 4px; } }
+
+@-moz-keyframes load {
+  from {
+    transform: translateX(-2000px); }
+  to {
+    transform: translateX(2000px);
+    letter-spacing: 4px; } }
+
+@-o-keyframes load {
+  from {
+    transform: translateX(-2000px); }
+  to {
+    transform: translateX(2000px);
+    letter-spacing: 4px; } }
+
+@keyframes load {
+  from {
+    transform: translateX(-2000px); }
+  to {
+    transform: translateX(2000px);
+    letter-spacing: 4px; } }
+
 .name__logo {
   width: 50px;
   display: block;
@@ -1599,7 +1627,7 @@
     filter: brightness(0.9);
     font-size: 56px; }
 
-.gallery {
+#gallery {
   margin-bottom: 200px; }
 
 .gallery__title {
@@ -1826,7 +1854,7 @@
   left: 0;
   right: 0;
   width: 330px;
-  height: 300px;
+  height: 330px;
   padding: 5px;
   transform: translate(160px, 150px);
   overflow-y: scroll; }
@@ -1919,8 +1947,8 @@
     margin-left: 76px;
     font-size: 16px; }
 
-.contact {
-  margin-bottom: 50px; }
+#contact {
+  margin-bottom: 60px; }
 
 .contact__title {
   display: block;
@@ -2026,7 +2054,8 @@
   -moz-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  animation-delay: 1s; }
+  animation-delay: 1s;
+  opacity: 0; }
 
 .contact__circle-three {
   width: 300px;
@@ -2061,7 +2090,8 @@
   -moz-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  animation-delay: 1s; }
+  animation-delay: 1s;
+  opacity: 0; }
 
 .contact__letter--email {
   width: 350px;
@@ -2107,7 +2137,7 @@ body {
   height: 100%;
   background-repeat: repeat;
   background-size: 600px;
-  overflow-x: hidden; }
+  overflow-x: scroll; }
 
 ::-webkit-scrollbar {
   background-color: rgba(0, 0, 0, 0.6);

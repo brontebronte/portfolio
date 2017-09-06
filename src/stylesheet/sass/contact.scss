@@ -1,8 +1,8 @@
 ////////////////////////////
 //   Contact SCSS File   //
 //////////////////////////
-.contact {
-  margin-bottom: 50px;
+#contact {
+  margin-bottom: 60px;
 }
 .contact__title {
   @include neon_subtitles; //located at other mixin
@@ -29,6 +29,7 @@
   @include circles;
   @include circles_rotate_two;
   animation-delay: 1s;
+  opacity:0;
 }
 
 .contact__circle-three {
@@ -37,6 +38,7 @@
   @include circles;
   @include circles_rotate_three;
   animation-delay: 1s;
+  opacity:0;
 }
 
 .contact__letter--email {

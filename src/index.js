@@ -13,7 +13,6 @@ import Menu from './Menu';
 import About from './About';
 import Gallery from './Gallery';
 import Contact from './Contact';
-import menuData from './menu_data.js';
 import allReducers from './reducers';
 import './stylesheet/css/main.css';
 import registerServiceWorker from './registerServiceWorker';
@@ -25,7 +24,7 @@ let store = createStore(allReducers);
 ReactDOM.render(<Name />, document.getElementById('name-react'));
 registerServiceWorker();
 
-ReactDOM.render(<Menu data={menuData} />, document.getElementById('menu-react'));
+ReactDOM.render(<Menu />, document.getElementById('menu-react'));
 registerServiceWorker();
 
 ReactDOM.render(<About />, document.getElementById('about-react'));

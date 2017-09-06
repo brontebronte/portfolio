@@ -17,7 +17,7 @@ import bunny from './image/bunny.svg'
 class Contact extends Component {
   render() {
     return (
-      <div className="contact">
+      <div id="contact">
         <div className="contact__circle-one"></div>
         <div className="contact__circle-two"></div>
         <div className="contact__circle-three"></div>
