@@ -6,12 +6,17 @@
 }
 .contact__title {
   @include neon_subtitles; //located at other mixin
+  -webkit-transform: translate(-60px, 150px);
+  -moz-transform: translate(-60px, 150px);
+  -ms-transform: translate(-60px, 150px);
+  -o-transform: translate(-60px, 150px);
   transform: translate(-60px, 150px);
 }
 
 .contact__mailbox {
   display: block;
   margin: auto;
+  -webkit-filter: $svgShadow;
   filter: $svgShadow;
   width: 300px;
 }
@@ -47,21 +52,18 @@
   background-color: $opaqueBlack;
   border-radius: 20px;
   padding: 19px;
+  -webkit-filter: $svgShadow;
   filter: $svgShadow;
   @include absolute_position;
   font-family: $subtitleFont;
   text-shadow: $neonBlue;
   text-align: center;
   color: $lightBlue;
+  -webkit-transform: translateY(240px);
+  -moz-transform: translateY(240px);
+  -ms-transform: translateY(240px);
+  -o-transform: translateY(240px);
   transform: translateY(240px);
   z-index: 2;
   letter-spacing: 2px;
-}
-
-.contact__bunny{
-  @include absolute_position;
-  transform: translate(10px, -660px) rotate(20deg);
-  filter: $svgShadow brightness(0.4);
-  width: 260px;
-  z-index: -1;
 }

@@ -23,11 +23,9 @@
 
 body {
     margin: 0;
-    background-image: url("../../image/wood.png");
+    background-color: $inkBlue;
     width: 100%;
     height: 100%;
-    background-repeat: repeat;
-    background-size: 600px;
     overflow-x: scroll;
 }
 
@@ -39,5 +37,7 @@ body {
 ::-webkit-scrollbar-thumb {
   border-radius: 50px;
   background-color: $opaqueBlack;
+  -webkit-box-shadow: $neonBlue;
+  -moz-box-shadow: $neonBlue;
   box-shadow: $neonBlue;
 }

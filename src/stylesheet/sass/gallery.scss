@@ -7,6 +7,10 @@
 
 .gallery__title {
   @include gallery_title;
+  -webkit-transform: translate(-20px, 160px);
+  -moz-transform: translate(-20px, 160px);
+  -ms-transform: translate(-20px, 160px);
+  -o-transform: translate(-20px, 160px);
   transform: translate(-20px, 160px);
   animation-delay: 3.1s;
   display: block;
@@ -21,45 +25,20 @@
   z-index: 1;
 }
 
-.gallery__milk {
-  display: block;
-  margin: auto;
-  filter: $svgShadow contrast(120%) brightness(0.7);
-  transform: translate(30px, -190px);
-  @include milk_carton;
-  position: relative;
-  animation-delay: 2s;
-  width: 350px;
-  z-index: -1;
-}
-
-.gallery__bunny {
-  @include absolute_position;
-  transform: translate(200px, -710px);
-  width: 170px;
-  filter: $svgShadow brightness(0.5);
-  @include fade;
-  opacity: 0;
-  animation-delay: 5s;
-}
-
-.gallery__circle {
-  width: 400px;
-  height: 400px;
-  @include circles;
-  transform: translate(-10px, -800px) scale(1);
-  z-index: -2;
-  filter: $svgShadow brightness(0.4);
-  @include circles_gallery;
-  animation-delay: 3s;
-}
 
 .gallery__preview {
-  @include absolute_position;
+  @include relative_position;
   width: 700px;
   height: 500px;
-  transform: translateY(-635px);
+  -webkit-transform: translateY(-135px);
+  -moz-transform: translateY(-135px);
+  -ms-transform: translateY(-135px);
+  -o-transform: translateY(-135px);
+  transform: translateY(-135px);
   @include fade;
+  -webkit-animation-delay: 5s;
+  -moz-animation-delay: 5s;
+  -o-animation-delay: 5s;
   animation-delay: 5s;
   opacity: 0;
 }
@@ -69,6 +48,10 @@
   width: 350px;
   height: 70px;
   padding: 5px;
+  -webkit-transform: translate(166px, 90px);
+  -moz-transform: translate(166px, 90px);
+  -ms-transform: translate(166px, 90px);
+  -o-transform: translate(166px, 90px);
   transform: translate(166px, 90px);
   @include fade;
   animation-delay: 5s;
@@ -89,6 +72,8 @@
   width: 290px;
   font-family: $galleryFont;
   font-size: 13px;
+  -webkit-box-shadow: $insetShadow;
+  -moz-box-shadow: $insetShadow;
   box-shadow: $insetShadow;
   &:focus {
     outline: none;
@@ -100,17 +85,26 @@
   width: 330px;
   height: 330px;
   padding: 5px;
+  -webkit-transform: translate(160px, 150px);
+  -moz-transform: translate(160px, 150px);
+  -ms-transform: translate(160px, 150px);
+  -o-transform: translate(160px, 150px);
   transform: translate(160px, 150px);
   overflow-y: scroll;
 }
 
 .gallery__preview--group-pic {
   width: 110px;
+  -webkit-box-shadow: $mainShadow;
+  -moz-box-shadow: $mainShadow;
   box-shadow: $mainShadow;
 }
 
 .gallery__preview--group {
   list-style: none;
+  -webkit-transition: 0.4s ease-in;
+  -moz-transition: 0.4s ease-in;
+  -o-transition: 0.4s ease-in;
   transition: 0.4s ease-in;
   padding: 18px;
   font-family: $galleryFont;
@@ -122,9 +116,13 @@
     text-shadow: $neonBlue;
     border-width: 1px;
     border-radius: 5px;
+    -webkit-box-shadow: $insetShadow;
+    -moz-box-shadow: $insetShadow;
     box-shadow: $insetShadow;
   }
   &:hover > .gallery__preview--group-pic {
+    -webkit-box-shadow: $insetShadow;
+    -moz-box-shadow: $insetShadow;
     box-shadow: $insetShadow;
   }
 }
@@ -138,6 +136,10 @@
    @include absolute_position;
    width: 331px;
    padding: 5px;
+   -webkit-transform: translate(-180px, -8px);
+   -moz-transform: translate(-180px, -8px);
+   -ms-transform: translate(-180px, -8px);
+   -o-transform: translate(-180px, -8px);
    transform: translate(-180px, -8px);
    margin-bottom: 200px;
    color: $lightBlue;
@@ -147,6 +149,8 @@
   width: $galleryPreviewWidth;
   margin: 0;
   padding: 0;
+  -webkit-box-shadow: $mainShadow;
+  -moz-box-shadow: $mainShadow;
   box-shadow: $mainShadow;
 }
 
@@ -159,6 +163,8 @@
   float: left;
   padding: 20px;
   border-radius: 20px 20px 0 0;
+  -webkit-box-shadow: $mainShadow;
+  -moz-box-shadow: $mainShadow;
   box-shadow: $mainShadow;
   color: $lightPinkColor;
   text-shadow: $neonPink;
@@ -175,7 +181,13 @@
   background-color: $opaqueBlack;
   margin-top: 0;
   font-size: 13px;
+  -webkit-transform: translateY(-3px);
+  -moz-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  -o-transform: translateY(-3px);
   transform: translateY(-3px);
+  -webkit-box-shadow: $mainShadow;
+  -moz-box-shadow: $mainShadow;
   box-shadow: $mainShadow;
 }
 
@@ -190,6 +202,9 @@
   font-size: 15px;
   margin-left: 80px;
   text-decoration: none;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   opacity: 0.7;
   &:hover {

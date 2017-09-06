@@ -35,12 +35,15 @@
 
 //  About Me Context Cube  //
 @mixin about_me {
-  background-image: url($darkWoodBack);
-  background-size: 400px;
+  background-color: $opaqueBlack;
+  -webkit-box-shadow: $mainShadow;
+  -moz-box-shadow: $mainShadow;
+  -o-box-shadow: $mainShadow;
   box-shadow: $mainShadow;
 }
 
 @mixin cloud {
+  -webkit-filter: brightness(0.2);
   filter: brightness(0.2);
   width: 0px;
   @include absolute_position;
@@ -55,5 +58,15 @@
   border-color: $lightBlue;
   @include absolute_position;
   z-index: -1;
+  -webkit-filter: $svgShadow;
   filter: $svgShadow;
+}
+
+//  transform origin center //
+@mixin transformCenter {
+  -webkit-transform-origin: center;
+  -moz-transform-origin: center;
+  -ms-transform-origin: center;
+  -o-transform-origin: center;
+  transform-origin: center;
 }

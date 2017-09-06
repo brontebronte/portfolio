@@ -7,10 +7,17 @@
   display: block;
   margin: auto;
   padding-top: 6px;
+  -webkit-transform: translate(-10px);
+  -moz-transform: translate(-10px);
+  -o-transform: translate(-10px);
+  -ms-transform: translate(-10px);
   transform: translate(-10px);
   position: relative;
   padding-top: 15px;
   @include spin_logo;
+  -webkit-animation-delay: 2.5s;
+  -moz-animation-delay: 2.5s;
+  -o-animation-delay: 2.5s;
   animation-delay: 2.5s;
   height: 80px;
 }

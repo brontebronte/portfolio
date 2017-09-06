@@ -11,10 +11,6 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { displayProject } from './actions/index.js';
 
-// Images
-import milk from './image/milkcarton.svg';
-import bunny from './image/bunny.svg'
-
 
 /////////////////////
 //   Components   //
@@ -44,9 +40,6 @@ class Gallery extends Component {
     return (
       <div id="gallery">
         <h2 className="gallery__title">gallery</h2>
-        <img className="gallery__milk" src={milk} alt="milk carton" />
-        <img className="gallery__bunny" src={bunny} alt="bunny" />
-        <p className="gallery__circle"></p>
         <div className="gallery__preview">
           <SearchGallery
             filterText={this.state.filterText}

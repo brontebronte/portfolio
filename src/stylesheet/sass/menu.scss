@@ -22,7 +22,10 @@
   display: inline;
   font-size: $subtitleFontSize;
   letter-spacing: $contextLetterSpacing;
-  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   z-index: 2;
     &:hover{
       color: $lightBlue;
@@ -34,27 +37,65 @@
 
 .menu-list__item-one {
   margin-right: $menuMarginRight;
+  -webkit-transform: translateY($menuTranformY);
+  -moz-transform: translateY($menuTranformY);
+  -ms-transform: translateY($menuTranformY);
+  -o-transform: translateY($menuTranformY);
   transform: translateY($menuTranformY);
     &:hover ~ .menu-list__arrow {
+      -webkit-transform: translate($arrowTranformTranslate) rotate(53deg);
+      -moz-transform: translate($arrowTranformTranslate) rotate(53deg);
+      -ms-transform: translate($arrowTranformTranslate) rotate(53deg);
+      -o-transform: translate($arrowTranformTranslate) rotate(53deg);
       transform: translate($arrowTranformTranslate) rotate(53deg);
+      -webkit-transform-origin: $arrowTranformOrigin;
+      -moz-transform-origin: $arrowTranformOrigin;
+      -ms-transform-origin: $arrowTranformOrigin;
+      -o-transform-origin: $arrowTranformOrigin;
       transform-origin: $arrowTranformOrigin;
     }
 }
 
 .menu-list__item-two {
   margin-right: $menuMarginRight;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   &:hover ~ .menu-list__arrow {
+    -webkit-transform: translate($arrowTranformTranslate) rotate(90deg);
+    -moz-transform: translate($arrowTranformTranslate) rotate(90deg);
+    -o-transform: translate($arrowTranformTranslate) rotate(90deg);
+    -ms-transform: translate($arrowTranformTranslate) rotate(90deg);
     transform: translate($arrowTranformTranslate) rotate(90deg);
+    -webkit-transform-origin: $arrowTranformOrigin;
+    -moz-transform-origin: $arrowTranformOrigin;
+    -o-transform-origin: $arrowTranformOrigin;
+    -ms-transform-origin: $arrowTranformOrigin;
     transform-origin: $arrowTranformOrigin;
   }
 }
 
 .menu-list__item-three {
+  -webkit-transform: translateY($menuTranformY);
+  -moz-transform: translateY($menuTranformY);
+  -o-transform: translateY($menuTranformY);
+  -ms-transform: translateY($menuTranformY);
   transform: translateY($menuTranformY);
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   &:hover ~ .menu-list__arrow {
+    -webkit-transform: translate($arrowTranformTranslate) rotate(130deg);
+    -moz-transform: translate($arrowTranformTranslate) rotate(130deg);
+    -o-transform: translate($arrowTranformTranslate) rotate(130deg);
+    -ms-transform: translate($arrowTranformTranslate) rotate(130deg);
     transform: translate($arrowTranformTranslate) rotate(130deg);
+    -webkit-transform-origin: $arrowTranformOrigin;
+    -moz-transform-origin: $arrowTranformOrigin;
+    -o-transform-origin: $arrowTranformOrigin;
+    -ms-transform-origin: $arrowTranformOrigin;
     transform-origin: $arrowTranformOrigin;
   }
 }
@@ -66,12 +107,15 @@
   margin: auto;
   font-family: $titleFont;
   font-size: 1.8em;
+  -webkit-transform: translateY(-110%);
+  -moz-transform: translateY(-110%);
+  -ms-transform: translateY(-110%);
+  -o-transform: translateY(-110%);
   transform: translateY(-110%);
   line-height: 160px;
   width: 350px;
   height: 260px;
-  background-image: url($darkWoodBack);
-  background-size: 400px;
+  background-color: $darkGrey;
   text-align: center;
   position: relative;
   z-index: -1;
@@ -82,18 +126,30 @@
   @include absolute_position;
   width: 130px;
   z-index: 1;
+  -webkit-transform: translateY(190px);
+  -moz-transform: translateY(190px);
+  -ms-transform: translateY(190px);
+  -o-transform: translateY(190px);
   transform: translateY(190px);
   @include tilt_motion;
+  -webkit-animation-delay: 1.2s;
+  -moz-animation-delay: 1.2s;
   animation-delay: 1.2s;
-  filter: brightness(0.5) drop-shadow(16px 16px 20px black);
+  -webkit-filter: brightness(0.4) drop-shadow(16px 16px 20px black);
+  filter: brightness(0.4) drop-shadow(16px 16px 20px black);
 }
 
 .menu__elevator--character {
   @include absolute_position;
   width: 280px;
+  -webkit-transform: translateY(131px);
+  -moz-transform: translateY(131px);
+  -ms-transform: translateY(131px);
+  -o-transform: translateY(131px);
   transform: translateY(131px);
   z-index: 1;
-  filter: brightness(0.6) drop-shadow(16px 16px 20px black) contrast(120%);
+  -webkit-filter: brightness(0.6) drop-shadow(16px 16px 20px black) contrast(140%);
+  filter: brightness(0.6) drop-shadow(16px 16px 20px black) contrast(140%);
 }
 
 .menu__elevator--pompom {
@@ -102,8 +158,15 @@
   margin: auto;
   position: relative;
   z-index: 2;
+  -webkit-transform: translate(26px, -136px);
+  -moz-transform: translate(26px, -136px);
+  -o-transform: translate(26px, -136px);
+  -ms-transform: translate(26px, -136px);
   transform: translate(26px, -136px);
   @include pompom_shine;
+  -webkit-animation-delay: 4s;
+  -moz-animation-delay: 4s;
+  -o-animation-delay: 4s;
   animation-delay: 4s;
   font-family: $subtitleFont;
 }
@@ -115,16 +178,24 @@
   margin: auto;
   width: 690px;
   height: 530px;
-  filter: $svgShadow;
+  -webkit-filter: $svgShadow  brightness(0.7) contrast(110%);
+  filter: $svgShadow brightness(0.7) contrast(110%);
 }
 
 .menu_elevator--woodpanel {
   width: 720px;
   height: 15px;
-  background-color: #294F7A;
+  background-color: $opaqueBlack;
   display: block;
   margin: auto;
+  -webkit-transform: translateY(-15px);
+  -moz-transform: translateY(-15px);
+  -o-transform: translateY(-15px);
+  -ms-transform: translateY(-15px);
   transform: translateY(-15px);
+  -webkit-box-shadow: $mainShadow;
+  -moz-box-shadow: $mainShadow;
+  -o-box-shadow: $mainShadow;
   box-shadow: $mainShadow;
   border-radius: 20px;
 }
@@ -136,16 +207,31 @@
   height: 26px;
   background-size: 170px;
   background-repeat: no-repeat;
-  position: absolute;
+  @include absolute_position;
+  -webkit-transform: translate($arrowTranformTranslate) rotate(1deg);
+  -moz-transform: translate($arrowTranformTranslate) rotate(1deg);
+  -o-transform: translate($arrowTranformTranslate) rotate(1deg);
+  -ms-transform: translate($arrowTranformTranslate) rotate(1deg);
   transform: translate($arrowTranformTranslate) rotate(1deg);
+  -webkit-transform-origin: $arrowTranformOrigin;
+  -moz-transform-origin: $arrowTranformOrigin;
+  -o-transform-origin: $arrowTranformOrigin;
+  -ms-transform-origin: $arrowTranformOrigin;
   transform-origin: $arrowTranformOrigin;
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
   transition: 1s ease-in-out;
 }
 
 .menu-list__level {
-  position: absolute;
+  @include absolute_position;
   font-family: $subtitleFont;
   font-size: $subtitleFontSize;
+  -webkit-transform: translate(48px, 261px);
+  -moz-transform: translate(48px, 261px);
+  -ms-transform: translate(48px, 261px);
+  -o-transform: translate(48px, 261px);
   transform: translate(48px, 261px);
   z-index: 1;
   text-align: center;
@@ -157,32 +243,21 @@
 }
 
 
-//  Elevator Gears  //
-#menu__elevator--gear-right-one {
-  @include rotate_clockwise;
-}
-
-#menu__elevator--gear-left-two {
-  @include rotate_clockwise;
-}
-
-#menu__elevator--gear-left-one {
-  @include rotate_counterclockwise;
-}
-
-#menu__elevator--gear-right-two {
-  @include rotate_counterclockwise;
-}
-
 //  Elevator Door  //
 #menu__elevator--door-right {
   @include right_door;
+  -webkit-animation-delay: $doorDelay;
+  -moz-animation-delay: $doorDelay;
+  -o-animation-delay: $doorDelay;
   animation-delay: $doorDelay;
   z-index: 2;
 }
 
 #menu__elevator--door-left {
   @include left_door;
+  -webkit-animation-delay: $doorDelay;
+  -moz-animation-delay: $doorDelay;
+  -o-animation-delay: $doorDelay;
   animation-delay: $doorDelay;
   z-index: 2;
 }
@@ -195,21 +270,38 @@
 .menu__sparkles--one {
   @include absolute_position;
   @include sparkling;
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  -o-animation-delay: 3s;
   animation-delay: 3s;
   height: 400px;
 }
 
 .menu__sparkles--two {
   @include absolute_position;
+  -webkit-transform: translateY($sparklesPositionY);
+  -moz-transform: translateY($sparklesPositionY);
+  -o-transform: translateY($sparklesPositionY);
+  -ms-transform: translateY($sparklesPositionY);
   transform: translateY($sparklesPositionY);
   @include sparkling;
   height: 520px;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -o-animation-delay: 2s;
   animation-delay: 2s;
 }
 
 .menu__sparkles--three {
+  -webkit-transform: translateY($sparklesPositionY);
+  -moz-transform: translateY($sparklesPositionY);
+  -o-transform: translateY($sparklesPositionY);
+  -ms-transform: translateY($sparklesPositionY);
   transform: translateY($sparklesPositionY);
   @include absolute_position;
   @include sparkling;
+  -webkit-animation-delay: 3.7s;
+  -moz-animation-delay: 3.7s;
+  -o-animation-delay: 3.7s;
   animation-delay: 3.7s;
 }
