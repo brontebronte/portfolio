@@ -1612,8 +1612,8 @@
   margin: auto;
   width: 690px;
   height: 530px;
-  -webkit-filter: drop-shadow(10px 10px 15px black) brightness(0.7) contrast(110%);
-  filter: drop-shadow(10px 10px 15px black) brightness(0.7) contrast(110%); }
+  -webkit-filter: drop-shadow(10px 10px 15px black) brightness(0.8) contrast(110%);
+  filter: drop-shadow(10px 10px 15px black) brightness(0.8) contrast(110%); }
 
 .menu_elevator--woodpanel {
   width: 720px;
