@@ -39,38 +39,38 @@ gulp.task('resize', function () {
       }],
       'gamearcade.png': [{
         width: 400,
-        quality: 70,
+        quality: 60,
         suffix: '-medium'
       }, {
         width: 300,
-        quality: 60,
+        quality: 33,
         suffix: '-small'
       }],
       'googlemap.png': [{
         width: 400,
-        quality: 70,
+        quality: 60,
         suffix: '-medium'
       }, {
         width: 300,
-        quality: 60,
+        quality: 33,
         suffix: '-small'
       }],
       'jasmine.png': [{
         width: 400,
-        quality: 70,
+        quality: 60,
         suffix: '-medium'
       }, {
         width: 300,
-        quality: 60,
+        quality: 33,
         suffix: '-small'
       }],
       'weboptimize.png': [{
         width: 400,
-        quality: 70,
+        quality: 60,
         suffix: '-medium'
       }, {
         width: 300,
-        quality: 60,
+        quality: 33,
         suffix: '-small'
       }],
       'skill_logo.png': [{
@@ -100,10 +100,10 @@ gulp.task('resize', function () {
         suffix: '-small'
       }],
       'wood.png': [{
-        quality: 80,
+        quality: 60,
         suffix: '-medium'
       }, {
-        quality: 70,
+        quality: 50,
         suffix: '-small'
       }]
     }))
