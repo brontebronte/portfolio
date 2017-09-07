@@ -1,6 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Megrim");
-@import url("https://fonts.googleapis.com/css?family=Cutive+Mono");
-@import url("https://fonts.googleapis.com/css?family=Quicksand");
 @-webkit-keyframes right_door {
   from {
     -webkit-transform: translateX(0px);
@@ -1634,7 +1632,7 @@
 
 .menu-list {
   list-style: none;
-  font-family: "Cutive Mono", cursive;
+  font-family: courier, verdana;
   color: grey;
   padding: 0;
   display: flex;
@@ -1658,7 +1656,7 @@
 
 .menu-list__item {
   display: inline;
-  font-size: 1.3em;
+  font-size: 1.1em;
   letter-spacing: 2px;
   -webkit-transition: 0.2s ease-in-out;
   -moz-transition: 0.2s ease-in-out;
@@ -1672,7 +1670,7 @@
     cursor: pointer; }
   @media screen and (max-width: 749px) {
     .menu-list__item {
-      font-size: 0.9em;
+      font-size: 0.8em;
       letter-spacing: 0px;
       color: #eff9ff;
       text-shadow: 0 0 20px #67C8FF, 0 0 10px #eff9ff, 0 0 40px #85d3ff, 0 0 70px #67C8FF, 0 0 80px #67C8FF, 0 0 100px #67C8FF, 0 0 130px #67C8FF; }
@@ -1931,7 +1929,7 @@
   -moz-animation-delay: 4s;
   -o-animation-delay: 4s;
   animation-delay: 4s;
-  font-family: "Cutive Mono", cursive; }
+  font-family: courier, verdana; }
   @media screen and (max-width: 749px) {
     .menu__elevator--pompom {
       -webkit-transform: translate(16px, -520px);
@@ -2007,8 +2005,8 @@
   margin-right: auto;
   left: 0;
   right: 0;
-  font-family: "Cutive Mono", cursive;
-  font-size: 1.3em;
+  font-family: courier, verdana;
+  font-size: 1.1em;
   -webkit-transform: translate(48px, 261px);
   -moz-transform: translate(48px, 261px);
   -ms-transform: translate(48px, 261px);
@@ -2342,12 +2340,12 @@
   -ms-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  font-family: "Cutive Mono", cursive;
-  font-size: 12px;
+  font-family: courier, verdana;
+  font-size: 11px;
   color: #eff9ff;
   text-shadow: 0 0 20px #67C8FF, 0 0 10px #eff9ff, 0 0 40px #85d3ff, 0 0 70px #67C8FF, 0 0 80px #67C8FF, 0 0 100px #67C8FF, 0 0 130px #67C8FF;
   letter-spacing: 2px;
-  padding: 11px;
+  padding: 10px;
   -webkit-transition: 0.8s ease-in-out;
   -moz-transition: 0.8s ease-in-out;
   -o-transition: 0.8s ease-in-out;
@@ -3090,7 +3088,7 @@
   margin: auto;
   margin-top: 10px;
   width: 290px;
-  font-family: "Quicksand", sans-serif;
+  font-family: helvetica, verdana;
   font-size: 13px;
   -webkit-box-shadow: inset 0 0 10px #000000;
   -moz-box-shadow: inset 0 0 10px #000000;
@@ -3135,7 +3133,7 @@
   -o-transition: 0.4s ease-in;
   transition: 0.4s ease-in;
   padding: 18px;
-  font-family: "Quicksand", sans-serif;
+  font-family: helvetica, verdana;
   color: #eff9ff;
   cursor: pointer;
   font-size: 14px; }
@@ -3194,7 +3192,7 @@
       width: 280px; } }
 
 .gallery__preview--view-title {
-  font-family: "Cutive Mono", cursive;
+  font-family: courier, verdana;
   width: 325px;
   height: 50px;
   background-color: rgba(0, 0, 0, 0.6);
@@ -3213,7 +3211,7 @@
       width: 280px; } }
 
 .gallery__preview--view-description {
-  font-family: "Quicksand", sans-serif;
+  font-family: helvetica, verdana;
   padding: 10px;
   width: 325px;
   height: auto;
@@ -3469,7 +3467,7 @@
   margin-right: auto;
   left: 0;
   right: 0;
-  font-family: "Cutive Mono", cursive;
+  font-family: courier, verdana;
   text-shadow: 0 0 20px #67C8FF, 0 0 10px #eff9ff, 0 0 40px #85d3ff, 0 0 70px #67C8FF, 0 0 80px #67C8FF, 0 0 100px #67C8FF, 0 0 130px #67C8FF;
   text-align: center;
   color: #eff9ff;

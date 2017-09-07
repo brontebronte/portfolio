@@ -20,7 +20,7 @@ class Contact extends Component {
         <div className="contact__circle-one"></div>
         <div className="contact__circle-two"></div>
         <div className="contact__circle-three"></div>
-        <div className="contact__letter--email">bronte.bronte.20@gmail.com</div>
+        <p className="contact__letter--email">bronte.bronte.20@gmail.com</p>
         <h2 className="contact__title">contact</h2>
         <img className="contact__mailbox" src={mailbox} alt="mailbox" />
       </div>

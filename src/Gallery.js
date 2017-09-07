@@ -79,7 +79,7 @@ class GalleryProjects extends Component {
         return (
           <li className="gallery__preview--group" key={galleryProject.galleryName} onClick={() => fullView(galleryProject)}>
             <img className="gallery__preview--group-pic" src={galleryProject.galleryPicSmall} alt='projects done' />
-            <h4 className="gallery__preview--group-name">{galleryProject.galleryName}</h4>
+            <p className="gallery__preview--group-name">{galleryProject.galleryName}</p>
           </li>
         )
       })
