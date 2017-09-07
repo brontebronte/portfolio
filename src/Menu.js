@@ -8,7 +8,6 @@
 // React
 import React, { Component } from 'react';
 import Scroll from 'react-scroll'; // Imports all Mixins
-import {scroller} from 'react-scroll'; //Imports scroller mixin, can use as scroller.scrollTo()
 
 // Images
 import character from './dest/mini-image/menu_character.svg';
