@@ -7,23 +7,19 @@
 
 // React
 import React, { Component } from 'react';
-import ReallySmoothScroll from 'really-smooth-scroll';
+
 
 // Images
-import fish from './image/fish_blue.svg';
-import fishBone from './image/fish_bone.svg';
-import hands from './image/hands.svg';
-import arrow from './image/about_arrow.svg';
-import plate from './image/plate.svg';
-import cloudOne from './image/cloud-top.png';
-import cloudTwo from './image/cloud-middle.png';
-import cloudThree from './image/cloud-lower.png';
-import logoSkill from './image/skill_logo.png';
-import light from './image/light.svg';
-
-
-// Really smooth scroll call
-ReallySmoothScroll.shim();
+import fish from './dest/mini-image/fish_blue.svg';
+import fishBone from './dest/mini-image/fish_bone.svg';
+import hands from './dest/mini-image/hands.svg';
+import arrow from './dest/mini-image/about_arrow.svg';
+import plate from './dest/mini-image/plate.svg';
+import cloudOne from './dest/mini-image/cloud-top-medium.png';
+import cloudTwo from './dest/mini-image/cloud-middle-medium.png';
+import cloudThree from './dest/mini-image/cloud-lower-medium.png';
+import logoSkill from './dest/mini-image/skill_logo-medium.png';
+import light from './dest/mini-image/light.svg';
 
 
 /////////////////////
@@ -64,9 +60,6 @@ class About extends Component {
           <div className="about__light--wire"></div>
           <img className="about__light--bulb" src={light} alt="light bulb" />
           <div className="about__light--shine"></div>
-        </div>
-        <div className="back" onClick={() => window.scrollTo(0,0)}>
-          <i className="fa fa-angle-double-up" aria-hidden="true"></i>
         </div>
       </div>
     );

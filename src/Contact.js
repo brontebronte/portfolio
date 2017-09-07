@@ -9,7 +9,7 @@
 import React, { Component } from 'react';
 
 // Images
-import mailbox from './image/postbox.svg';
+import mailbox from './dest/mini-image/postbox.svg';
 
 /////////////////////
 //   Components   //

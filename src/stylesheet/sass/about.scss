@@ -14,6 +14,15 @@
   margin: 200px auto;
   perspective: 800px;
   cursor: pointer;
+  @include mQ(749px) {
+    -webkit-transform: translate(-13px, -260px);
+    -moz-transform: translate(-13px, -260px);
+    -ms-transform: translate(-13px, -260px);
+    -o-transform: translate(-13px, -260px);
+    transform: translate(-13px, -260px);
+    width: 250px;
+    height: 250px;
+  }
 }
 
 .about__box {
@@ -29,10 +38,10 @@
   text-shadow: $neonBlue;
   letter-spacing: $contextLetterSpacing;
   padding: 11px;
-  -webkit-transition: 2s ease-in-out;
-  -moz-transition: 2s ease-in-out;
-  -o-transition: 2s ease-in-out;
-  transition: 2s ease-in-out;
+  -webkit-transition: 0.8s ease-in-out;
+  -moz-transition: 0.8s ease-in-out;
+  -o-transition: 0.8s ease-in-out;
+  transition: 0.8s ease-in-out;
   &:hover {
     -webkit-transform: rotateY(90deg);
     -moz-transform: rotateY(90deg);
@@ -61,6 +70,20 @@
   &:hover ~ .about__cloud-three {
     @include cloudsMove;
   }
+  @include mQ(749px) {
+    width: 250px;
+    font-size: 10.4px;
+    line-height: 9.6px;
+    &:hover ~ .about__cloud-one {
+      visibility: hidden;
+    }
+    &:hover ~ .about__cloud-two {
+      visibility: hidden;
+    }
+    &:hover ~ .about__cloud-three {
+      visibility: hidden;
+    }
+  }
 }
 
 .about__box div {
@@ -68,6 +91,10 @@
   width: 300px;
   height: 300px;
   backface-visibility: hidden;
+  @include mQ(749px) {
+    width: 250px;
+    height:250px;
+  }
 }
 
 .about__front {
@@ -79,6 +106,13 @@
   padding: 32px;
   text-align: center;
   @include about_me;
+  @include mQ(745px) {
+    -webkit-transform: translateZ(125px);
+    -moz-transform: translateZ(125px);
+    -ms-transform: translateZ(125px);
+    -o-transform: translateZ(125px);
+    transform: translateZ(125px);
+  }
 }
 
 .about__left {
@@ -94,6 +128,13 @@
   transform-origin: left;
   padding: 30px;
   @include about_me;
+  @include mQ(745px){
+    -webkit-transform: rotateY(-90deg) translateX(-125px);
+    -moz-transform: rotateY(-90deg) translateX(-125px);
+    -ms-transform: rotateY(-90deg) translateX(-125px);
+    -o-transform: rotateY(-90deg) translateX(-125px);
+    transform: rotateY(-90deg) translateX(-125px);
+  }
 }
 
 .about__front--one {
@@ -106,6 +147,9 @@
 
 .about__left-logo {
   width:250px;
+  @include mQ(749px) {
+    width: 200px;
+  }
 }
 
 //  hands  //
@@ -125,6 +169,9 @@
   -moz-transition: 1s ease-in;
   -o-transition: 1s ease-in;
   transition: 1s ease-in;
+  @include mQ(749px) {
+    visibility: hidden;
+  }
 }
 
 // arrow  //
@@ -146,6 +193,9 @@
   width: 130px;
   z-index: 3;
   @include absolute_position;
+  @include mQ(749px) {
+    visibility: hidden;
+  }
 }
 
 
@@ -172,11 +222,18 @@
   -ms-transform: translate(10px, -230px);
   -o-transform: translate(10px, -230px);
   transform: translate(10px, -230px);
+  @include mQ(749px) {
+    -webkit-transform: translate(8px, -320px);
+    -moz-transform: translate(8px, -320px);
+    -ms-transform: translate(8px, -320px);
+    -o-transform: translate(8px, -320px);
+    transform: translate(8px, -320px);
+  }
 }
 
 .about__title--image {
-  display: block;
-  margin: auto;
+  @include absolute_position;
+  width: 370px;
   -webkit-transform: translateY(-330px);
   -moz-transform: translateY(-330px);
   -ms-transform: translateY(-330px);
@@ -184,6 +241,14 @@
   transform: translateY(-330px);
   -webkit-filter: $svgShadow brightness(0.7);
   filter: $svgShadow brightness(0.7);
+  @include mQ(749px) {
+    width: 280px;
+    -webkit-transform: translate(30px, -400px);
+    -moz-transform: translate(30px, -400px);
+    -ms-transform: translate(30px, -400px);
+    -o-transform: translate(30px, -400px);
+    transform: translate(30px, -400px);
+  }
 }
 
 
@@ -206,6 +271,8 @@
   -o-transition-delay: 0.5s;
   transition-delay: 0.5s;
   opacity: 0;
+  @include mQ(749px) {
+  }
 }
 
 .about__title--font-bone {
@@ -215,6 +282,13 @@
   -ms-transform: translate(25px, -230px);
   -o-transform: translate(25px, -230px);
   transform: translate(25px, -230px);
+  @include mQ(749px) {
+    -webkit-transform: translate(15px, -308px);
+    -moz-transform: translate(15px, -308px);
+    -ms-transform: translate(15px, -308px);
+    -o-transform: translate(15px, -308px);
+    transform: translate(15px, -308px);
+  }
 }
 
 .about__title--image-bone {
@@ -227,6 +301,15 @@
   transform: translateY(-330px);
   -webkit-filter: $svgShadow brightness(0.7);
   filter: $svgShadow brightness(0.7);
+  @include mQ(749px) {
+    width: 280px;
+    -webkit-transform: translate(20px, -390px);
+    -moz-transform: translate(20px, -390px);
+    -ms-transform: translate(20px, -390px);
+    -o-transform: translate(20px, -390px);
+    transform: translate(20px, -390px);
+
+  }
 }
 
 .about__plate {
@@ -249,6 +332,14 @@
   width: 400px;
   -webkit-filter: $svgShadow brightness(0.8);
   filter: $svgShadow brightness(0.8);
+  @include mQ(749px) {
+    width: 300px;
+    -webkit-transform: translate(-10px, 220px);
+    -moz-transform: translate(-10px, 220px);
+    -ms-transform: translate(-10px, 220px);
+    -o-transform: translate(-10px, 220px);
+    transform: translate(-10px, 220px);
+  }
 }
 
 .about__cloud-one{
@@ -258,6 +349,9 @@
   -ms-transform: translate(-120px, -150px);
   -o-transform: translate(-120px, -150px);
   transform: translate(-120px, -150px);
+  @include mQ(745px) {
+    visibility: hidden;
+  }
 }
 
 .about__cloud-two{
@@ -269,6 +363,9 @@
   transform: translate(-200px, -50px);
   z-index: -1;
   animation-delay: 0.2s;
+  @include mQ(745px) {
+    visibility: hidden;
+  }
 }
 
 .about__cloud-three{
@@ -279,6 +376,9 @@
   -o-transform: translate(80px, 250px);
   transform: translate(80px, 250px);
   animation-delay: 0.4s;
+  @include mQ(745px) {
+    visibility: hidden;
+  }
 }
 
 //  light bulb  //
@@ -292,6 +392,9 @@
   transform: translate(80px, -90px);
   z-index: -1;
   @include lightMove;
+  @include mQ(745px) {
+    visibility: hidden;
+  }
 }
 
 .about__light--bulb {
@@ -331,29 +434,4 @@
   z-index: -1;
   -webkit-filter: blur(32px) saturate(1.7);
   filter: blur(32px) saturate(1.7);
-}
-
-.back {
-  width: 55px;
-  height: 55px;
-  z-index: 3;
-  position: fixed;
-  bottom: 1%;
-  right: 1%;
-  -webkit-transition: 0.2s ease;
-  -moz-transition: 0.2s ease;
-  -o-transition: 0.2s ease;
-  transition: 0.2s ease;
-  cursor: pointer;
-  -webkit-filter: brightness(0.6);
-  filter: brightness(0.6);
-  color: $lightBlue;
-  text-align: center;
-  font-size: 55px;
-  text-shadow: $neonBlue;
-  &:hover {
-    -webkit-filter: brightness(0.9);
-    filter: brightness(0.9);
-    font-size: 59px;
-  }
 }

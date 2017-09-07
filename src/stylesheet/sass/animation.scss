@@ -144,6 +144,38 @@
   @include transformCenter;
 }
 
+
+@include keyframes (tilt_motion_small) {
+ 20% {
+   -webkit-transform: translateY(355px) rotate(-10deg);
+   -moz-transform: translateY(355px) rotate(-10deg);
+   -ms-transform: translateY(355px) rotate(-10deg);
+   -o-transform: translateY(355px) rotate(-10deg);
+   transform: translateY(355px) rotate(-10deg);
+   transform-origin: center;
+ }
+ 70% {
+   -webkit-transform: translateY(355px) rotate(10deg);
+   -moz-transform: translateY(355px) rotate(10deg);
+   -ms-transform: translateY(355px) rotate(10deg);
+   -o-transform: translateY(355px) rotate(10deg);
+   transform: translateY(355px) rotate(10deg);
+   transform-origin: center;
+ }
+ 100% {
+   -webkit-transform: translateY(355px);
+   -moz-transform: translateY(355px);
+   -ms-transform: translateY(355px);
+   -o-transform: translateY(355px);
+   transform: translateY(355px);
+ }
+}
+
+@mixin tilt_motion_small {
+  @include animate(tilt_motion_small, 2s, 1, linear, forwards);
+  @include transformCenter;
+}
+
 //  Logo //
 @include keyframes (spin_logo) {
   30% {
@@ -158,7 +190,6 @@
     -o-transform-origin: bottom;
     transform-origin: bottom;
     z-index: 1;
-    width: 55px;
   }
   100% {
     -webkit-transform: translate(20px, 515px) rotate(17deg);
@@ -171,7 +202,6 @@
     -ms-transform-origin: center;
     -o-transform-origin: center;
     transform-origin: center;
-    width: 70px;
     z-index: 1;
   }
 }
@@ -179,6 +209,40 @@
 @mixin spin_logo {
   @include animate(spin_logo, 2s, none, linear, forwards);
 }
+
+@include keyframes (spin_logo_small) {
+  30% {
+    -webkit-transform: translate(-10px, 100px) rotate(360deg);
+    -moz-transform: translate(-10px, 100px) rotate(360deg);
+    -ms-transform: translate(-10px, 100px) rotate(360deg);
+    -o-transform: translate(-10px, 100px) rotate(360deg);
+    transform: translate(-10px, 100px) rotate(360deg);
+    -webkit-transform-origin: bottom;
+    -moz-transform-origin: bottom;
+    -ms-transform-origin: bottom;
+    -o-transform-origin: bottom;
+    transform-origin: bottom;
+    z-index: 1;
+  }
+  100% {
+    -webkit-transform: translate(14px, 170px) rotate(17deg);
+    -moz-transform: translate(14px, 170px) rotate(17deg);
+    -ms-transform: translate(14px, 170px) rotate(17deg);
+    -o-transform: translate(14px, 170px) rotate(17deg);
+    transform: translate(14px, 170px) rotate(17deg);
+    -webkit-transform-origin: center;
+    -moz-transform-origin: center;
+    -ms-transform-origin: center;
+    -o-transform-origin: center;
+    transform-origin: center;
+    z-index: 1;
+  }
+}
+
+@mixin spin_logo_small {
+  @include animate(spin_logo_small, 2s, none, linear, forwards);
+}
+
 
 //  Pom Pom Shine  //
 @include keyframes (pompom_shine) {
@@ -235,6 +299,7 @@
     -ms-transform: translateY($sparklesPositionY);
     -o-transform: translateY($sparklesPositionY);
     transform: translateY($sparklesPositionY);
+    opacity: 1;
 
   }
   to {
@@ -244,6 +309,7 @@
     -o-transform: translateY(-200px);
     transform: translateY(-200px);
     visibility: visible;
+    opacity: 0.2;
   }
 }
 
@@ -251,6 +317,30 @@
   @include animate(sparkling, 2.2s, infinite, ease-in, both);
 }
 
+@include keyframes (sparkling_small) {
+  from {
+    -webkit-transform: translateY($sparklesPositionYSmall);
+    -moz-transform: translateY($sparklesPositionYSmall);
+    -ms-transform: translateY($sparklesPositionYSmall);
+    -o-transform: translateY($sparklesPositionYSmall);
+    transform: translateY($sparklesPositionYSmall);
+    opacity:1;
+
+  }
+  to {
+    -webkit-transform: translateY(-750px);
+    -moz-transform: translateY(-750px);
+    -ms-transform: translateY(-750px);
+    -o-transform: translateY(-750px);
+    transform: translateY(-750px);
+    visibility: visible;
+    opacity:0.2;
+  }
+}
+
+@mixin sparkling_small {
+  @include animate(sparkling_small, 2.2s, infinite, ease-in, both);
+}
 
 //  Hands moving on About cube  //
 @include keyframes (moving_hands) {
@@ -507,26 +597,4 @@
 
 @mixin circles_rotate_three {
   @include animate(circles_rotate_three, 6s, infinite, ease-in-out, forwards);
-}
-
-// circle gallery
-@include keyframes (circles_gallery) {
-  from {
-    -webkit-transform: translate(-10px, -300px) scale(1);
-    -moz-transform: translate(-10px, -300px) scale(1);
-    -ms-transform: translate(-10px, -300px) scale(1);
-    -o-transform: translate(-10px, -300px) scale(1);
-    transform: translate(-10px, -300px) scale(1);
-  }
-  to {
-    -webkit-transform: translate(150px, -350px) scale(0.4);
-    -moz-transform: translate(150px, -350px) scale(0.4);
-    -ms-transform: translate(150px, -350px) scale(0.4);
-    -o-transform: translate(150px, -350px) scale(0.4);
-    transform: translate(150px, -350px) scale(0.4);
-  }
-}
-
-@mixin circles_gallery {
-  @include animate(circles_gallery, 3s, 1, ease-in-out, forwards);
 }

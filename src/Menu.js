@@ -7,17 +7,17 @@
 
 // React
 import React, { Component } from 'react';
-import ReallySmoothScroll from 'really-smooth-scroll';
+import Scroll from 'react-scroll'; // Imports all Mixins
+import {scroller} from 'react-scroll'; //Imports scroller mixin, can use as scroller.scrollTo()
 
 // Images
-import character from './image/menu_character.svg';
-import glasses from './image/glasses.svg';
-import sparkleOne from './image/sparkleone.png';
-import sparkleTwo from './image/sparkletwo.png';
+import character from './dest/mini-image/menu_character.svg';
+import glasses from './dest/mini-image/glasses.svg';
+import sparkleOne from './dest/mini-image/sparkleone-medium.png';
+import sparkleTwo from './dest/mini-image/sparkletwo-medium.png';
 
 
-// Really smooth scroll call
-ReallySmoothScroll.shim();
+var scroll     = Scroll.animateScroll;
 
 /////////////////////
 //   Components   //
@@ -33,9 +33,9 @@ class Menu extends Component {
     return (
       <div id="menu">
         <ul className="menu-list">
-          <li className="menu-list__item menu-list__item-one" onClick={() => window.scrollTo(0,960)}>about</li>
-          <li className="menu-list__item menu-list__item-two" onClick={() => window.scrollTo(0,2000)}>gallery</li>
-          <li className="menu-list__item menu-list__item-three" onClick={() => window.scrollTo(0,3000)}>contact</li>
+          <li className="menu-list__item menu-list__item-one" onClick={() => scroll.scrollTo(970)}>about</li>
+          <li className="menu-list__item menu-list__item-two" onClick={() => scroll.scrollTo(2050)}>gallery</li>
+          <li className="menu-list__item menu-list__item-three" onClick={() => scroll.scrollTo(3000)}>contact</li>
           <div className="menu-list__arrow"></div>
           <div className="menu-list__level">home sweet home</div>
         </ul>
@@ -539,6 +539,9 @@ class Menu extends Component {
           <img className="menu__sparkles--one" src={sparkleOne} alt="sparkle" />
           <img className="menu__sparkles--two" src={sparkleTwo} alt="sparkle" />
           <img className="menu__sparkles--three" src={sparkleTwo} alt="sparkle" />
+        </div>
+        <div className="back" onClick={() => scroll.scrollTo(0)}>
+          <i className="fa fa-angle-double-up" aria-hidden="true"></i>
         </div>
       </div>
     );

@@ -56,6 +56,7 @@
   border-radius: 50%;
   border-style: dashed;
   border-color: $lightBlue;
+  background-color: black;
   @include absolute_position;
   z-index: -1;
   -webkit-filter: $svgShadow;
@@ -69,4 +70,12 @@
   -ms-transform-origin: center;
   -o-transform-origin: center;
   transform-origin: center;
+}
+
+
+//  media queries  //
+@mixin mQ($arg) {
+  @media screen and (max-width: $arg) {
+    @content;
+  }
 }

@@ -20,6 +20,10 @@
   -o-animation-delay: 2.5s;
   animation-delay: 2.5s;
   height: 80px;
+  @include mQ(749px) {
+    width: 40px;
+    @include spin_logo_small;
+  }
 }
 
 .name__title {
@@ -31,4 +35,7 @@
   text-align: center;
   letter-spacing: 0.7em;
   @include pink_neon_flicker; //located at animation
+  @include mQ(749px) {
+    font-size: $titleFontSizeSmall;
+  }
 }

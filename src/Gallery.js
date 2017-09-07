@@ -78,7 +78,7 @@ class GalleryProjects extends Component {
         //pretty much loops through the objects to append
         return (
           <li className="gallery__preview--group" key={galleryProject.galleryName} onClick={() => fullView(galleryProject)}>
-            <img className="gallery__preview--group-pic" src={galleryProject.galleryPic} alt='projects done' />
+            <img className="gallery__preview--group-pic" src={galleryProject.galleryPicSmall} alt='projects done' />
             <h4 className="gallery__preview--group-name">{galleryProject.galleryName}</h4>
           </li>
         )

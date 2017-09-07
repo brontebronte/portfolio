@@ -24,6 +24,11 @@ $subtitleFontSize: 1.3em;
 $neonPink: 0 0 20px #da36d9, 0 0 10px $lightPinkColor, 0 0 40px #F33CF2, 0 0 70px #da36d9, 0 0 80px #da36d9, 0 0 100px #da36d9, 0 0 130px #da36d9;
 $neonBlue: 0 0 20px #67C8FF, 0 0 10px #eff9ff, 0 0 40px #85d3ff, 0 0 70px #67C8FF, 0 0 80px #67C8FF, 0 0 100px #67C8FF, 0 0 130px #67C8FF;
 
+  // after media query //
+  $titleFontSizeSmall: 1.8em;
+  $subtitleFontSizeSmall: 0.9em;
+
+
 //////////////////
 //  Spacings   //
 $menuMarginRight: 70px;
@@ -34,6 +39,12 @@ $arrowTranformTranslate: -85px, 187px;
 $sparklesPositionY: -330px;
 $galleryPreviewWidth: 325px;
 
+  // after media queries  //
+  $menuMarginRightSmall: 37px;
+  $menuTranformYSmall: 0px;
+  $sparklesPositionYSmall:-800px;
+  $sparkleWidthSmall: 250px;
+  $galleryPreviewWidthSmall: 280px;
 
 
 //////////////////
@@ -41,6 +52,8 @@ $galleryPreviewWidth: 325px;
 $mainShadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.2), 0 20px 30px 0 rgba(0, 0, 0, 0.19);
 $svgShadow: drop-shadow(10px 10px 15px black);
 $insetShadow: inset 0 0 10px #000000;
+
+
 
 //////////////////
 //  Animation  //

@@ -16,6 +16,16 @@
   justify-content: center;
   margin-top: 2px;
   margin-bottom: 8px;
+  @include mQ(749px) {
+    -webkit-box-shadow: $insetShadow;
+    -moz-box-shadow: $insetShadow;
+    -o-box-shadow: $insetShadow;
+    box-shadow: $insetShadow;
+    width:280px;
+    height:20px;
+    text-align: center;
+    @include absolute_position;
+  }
 }
 
 .menu-list__item {
@@ -27,12 +37,21 @@
   -o-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
   z-index: 2;
-    &:hover{
+    &:hover {
       color: $lightBlue;
       text-shadow: $neonBlue;
       letter-spacing: 5px;
       cursor: pointer;
     }
+  @include mQ(749px) {
+    font-size: $subtitleFontSizeSmall;
+    letter-spacing: 0px;
+    color: $lightBlue;
+    text-shadow: $neonBlue;
+    &:hover {
+      letter-spacing: 0px;
+    }
+  }
 }
 
 .menu-list__item-one {
@@ -54,6 +73,14 @@
       -o-transform-origin: $arrowTranformOrigin;
       transform-origin: $arrowTranformOrigin;
     }
+    @include mQ(749px) {
+      margin-right: $menuMarginRightSmall;
+      -webkit-transform: translateY($menuTranformYSmall);
+      -moz-transform: translateY($menuTranformYSmall);
+      -ms-transform: translateY($menuTranformYSmall);
+      -o-transform: translateY($menuTranformYSmall);
+      transform: translateY($menuTranformYSmall);
+    }
 }
 
 .menu-list__item-two {
@@ -73,6 +100,9 @@
     -o-transform-origin: $arrowTranformOrigin;
     -ms-transform-origin: $arrowTranformOrigin;
     transform-origin: $arrowTranformOrigin;
+  }
+  @include mQ(749px) {
+    margin-right: $menuMarginRightSmall;
   }
 }
 
@@ -98,6 +128,13 @@
     -ms-transform-origin: $arrowTranformOrigin;
     transform-origin: $arrowTranformOrigin;
   }
+  @include mQ(749px) {
+    -webkit-transform: translateY($menuTranformYSmall);
+    -moz-transform: translateY($menuTranformYSmall);
+    -ms-transform: translateY($menuTranformYSmall);
+    -o-transform: translateY($menuTranformYSmall);
+    transform: translateY($menuTranformYSmall);
+  }
 }
 
 
@@ -120,23 +157,37 @@
   position: relative;
   z-index: -1;
   color: $greyColor;
+  @include mQ(749px) {
+    -webkit-transform: translateY(-190%);
+    -moz-transform: translateY(-190%);
+    -ms-transform: translateY(-190%);
+    -o-transform: translateY(-190%);
+    transform: translateY(-190%);
+    height: 400px;
+    width: 280px;
+    font-size: 1.3em;
+    line-height: 540px;
+    -webkit-box-shadow: $insetShadow;
+    -moz-box-shadow: $insetShadow;
+    -o-box-shadow: $insetShadow;
+    box-shadow: $insetShadow;
+  }
 }
 
 .menu__elevator--glasses {
   @include absolute_position;
   width: 130px;
   z-index: 1;
-  -webkit-transform: translateY(190px);
-  -moz-transform: translateY(190px);
-  -ms-transform: translateY(190px);
-  -o-transform: translateY(190px);
-  transform: translateY(190px);
   @include tilt_motion;
   -webkit-animation-delay: 1.2s;
   -moz-animation-delay: 1.2s;
   animation-delay: 1.2s;
   -webkit-filter: brightness(0.4) drop-shadow(16px 16px 20px black);
   filter: brightness(0.4) drop-shadow(16px 16px 20px black);
+  @include mQ(749px) {
+    width: 90px;
+    @include tilt_motion_small;
+  }
 }
 
 .menu__elevator--character {
@@ -148,8 +199,16 @@
   -o-transform: translateY(131px);
   transform: translateY(131px);
   z-index: 1;
-  -webkit-filter: brightness(0.6) drop-shadow(16px 16px 20px black) contrast(140%);
-  filter: brightness(0.6) drop-shadow(16px 16px 20px black) contrast(140%);
+  -webkit-filter: brightness(0.7) drop-shadow(16px 16px 20px black) contrast(140%);
+  filter: brightness(0.7) drop-shadow(16px 16px 20px black) contrast(140%);
+  @include mQ(749px) {
+    width: 200px;
+    -webkit-transform: translateY(310px);
+    -moz-transform: translateY(310px);
+    -ms-transform: translateY(310px);
+    -o-transform: translateY(310px);
+    transform: translateY(310px);
+  }
 }
 
 .menu__elevator--pompom {
@@ -169,6 +228,13 @@
   -o-animation-delay: 4s;
   animation-delay: 4s;
   font-family: $subtitleFont;
+  @include mQ(749px) {
+    -webkit-transform: translate(16px, -520px);
+    -moz-transform: translate(16px, -520px);
+    -o-transform: translate(16px, -520px);
+    -ms-transform: translate(16px, -520px);
+    transform: translate(16px, -520px);
+  }
 }
 
 
@@ -180,6 +246,9 @@
   height: 530px;
   -webkit-filter: $svgShadow  brightness(0.8) contrast(110%);
   filter: $svgShadow brightness(0.8) contrast(110%);
+  @include mQ(749px) {
+    visibility: hidden;
+  }
 }
 
 .menu_elevator--woodpanel {
@@ -198,6 +267,9 @@
   -o-box-shadow: $mainShadow;
   box-shadow: $mainShadow;
   border-radius: 20px;
+  @include mQ(749px) {
+    visibility: hidden;
+  }
 }
 
 .menu-list__arrow {
@@ -222,6 +294,9 @@
   -moz-transition: 1s ease-in-out;
   -o-transition: 1s ease-in-out;
   transition: 1s ease-in-out;
+  @include mQ(749px) {
+    visibility: hidden;
+  }
 }
 
 .menu-list__level {
@@ -240,6 +315,9 @@
   color: $lightBlue;
   text-shadow: $neonBlue;
   letter-spacing: $contextLetterSpacing;
+  @include mQ(749px) {
+    visibility: hidden;
+  }
 }
 
 
@@ -275,33 +353,65 @@
   -o-animation-delay: 3s;
   animation-delay: 3s;
   height: 400px;
+  @include mQ(749px) {
+    @include sparkling_small;
+    width: $sparkleWidthSmall;
+  }
 }
 
 .menu__sparkles--two {
   @include absolute_position;
-  -webkit-transform: translateY($sparklesPositionY);
-  -moz-transform: translateY($sparklesPositionY);
-  -o-transform: translateY($sparklesPositionY);
-  -ms-transform: translateY($sparklesPositionY);
-  transform: translateY($sparklesPositionY);
   @include sparkling;
   height: 520px;
   -webkit-animation-delay: 2s;
   -moz-animation-delay: 2s;
   -o-animation-delay: 2s;
   animation-delay: 2s;
+  @include mQ(749px) {
+    @include sparkling_small;
+    width: $sparkleWidthSmall;
+  }
 }
 
 .menu__sparkles--three {
-  -webkit-transform: translateY($sparklesPositionY);
-  -moz-transform: translateY($sparklesPositionY);
-  -o-transform: translateY($sparklesPositionY);
-  -ms-transform: translateY($sparklesPositionY);
-  transform: translateY($sparklesPositionY);
   @include absolute_position;
   @include sparkling;
   -webkit-animation-delay: 3.7s;
   -moz-animation-delay: 3.7s;
   -o-animation-delay: 3.7s;
   animation-delay: 3.7s;
+  @include mQ(749px) {
+    @include sparkling_small;
+    width: $sparkleWidthSmall;
+  }
+}
+
+.back {
+  width: 55px;
+  height: 55px;
+  z-index: 3;
+  position: fixed;
+  bottom: 2.5%;
+  right: 2.5%;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+  cursor: pointer;
+  -webkit-filter: brightness(0.6);
+  filter: brightness(0.6);
+  color: $lightBlue;
+  text-align: center;
+  font-size: 55px;
+  text-shadow: $neonBlue;
+  &:hover {
+    -webkit-filter: brightness(0.9);
+    filter: brightness(0.9);
+    font-size: 59px;
+  }
+  @include mQ(749px) {
+    position: fixed;
+    bottom: 2.5%;
+    left: 2.5%;
+  }
 }
